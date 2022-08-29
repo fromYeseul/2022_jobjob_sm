@@ -1,0 +1,35 @@
+.myPeoList{
+    .yScroll{
+        //220829
+        //height: calc(100vh - 272px);    
+        // padding: 1.25rem 2.5rem;
+        height: calc(100vh - 223px);    
+        padding: rem(20) rem(30);
+        font-size: rem(14);
+        //220829    
+        @include scroll_0;
+    }
+}
+
+.myPeoDetail{
+    .notify{
+        padding: 0 rem(30);
+        p{
+            &:first-child{
+                font-size: rem(18);
+                font-weight: 700;
+            }
+        }
+    }    
+    .tableBox{
+        //220829
+        // height: calc(100vh - 240px);  
+        height: calc(100vh - 200px);  
+        //220829
+        margin-top: rem(30);      
+    }
+    .boxListWrap{    
+        height: calc(100vh - 200px);
+        margin-top: rem(20);
+    }
+}

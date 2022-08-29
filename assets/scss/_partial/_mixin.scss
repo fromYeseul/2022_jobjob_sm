@@ -1,0 +1,82 @@
+
+@mixin heightArray{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin sideArray{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+//flex
+//1:1
+@mixin flex_1_1{
+    display: flex;
+    .prefix{flex: 1 1 30%;}
+    .center{flex: 1 1 30%;}
+    .suffix{flex: 1 1 30%;}
+}
+//1:2
+@mixin flex_1_2{
+    display: flex;
+    .prefix{flex: 1 1 40%;}
+    .suffix{flex: 2 1 60%;}
+}
+//2:1
+@mixin flex_2_1{
+    display: flex;
+    .prefix{flex: 1 1 60%;}
+    .suffix{flex: 2 1 40%;}
+}
+@mixin flex_3_1{
+    display: flex;
+    .prefix{flex: 3 1 75%;}
+    .suffix{flex: 1 1 25%;}
+}
+
+
+@mixin clear_float{
+    &::after{
+        content:'';
+        display: block;
+        clear: both;
+    }
+}
+
+
+
+@mixin ellipsis{
+    width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    white-space:nowrap;
+    text-align: left;
+    //color: $mainColor;
+    cursor:pointer;
+    //text-decoration: underline;
+}
+
+@mixin ellipsis-double {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: inherit;
+    word-wrap:break-word;
+    -webkit-line-clamp: 2;
+    text-align: left;
+    -webkit-box-orient: vertical;
+}
+
+
+@mixin scroll_0{
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+        width: 0;
+    }
+}
+  

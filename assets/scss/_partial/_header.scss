@@ -1,0 +1,69 @@
+header{        
+    width: 100%;
+    min-width: rem(1920);
+    //220829
+    //height: rem(70); 
+    height: rem(60);
+    font-size: rem(14);
+    //220829
+    padding: 0 rem(40);
+    align-items: center;
+    position: relative;
+    
+    border-bottom: 1px solid $layoutColor;
+    @include sideArray; 
+    //220829      
+    .prefix{
+        margin-top: rem(6);
+    }
+    //220829
+    .center{
+        margin-top: -10px;
+        margin-left: rem(170);
+        a{        
+            padding: rem(5) rem(4);
+            //220829    
+            // margin: 0 rem(25);
+            // font-size: rem(20);
+            margin: 0 rem(16);
+            font-size: rem(18);
+            //220829    
+            font-weight: 700;
+            color: $cancel;
+            &.is-active{
+                color: $mainColor;
+                border-bottom: 4px solid $mainColor;
+            }
+        }
+    }
+    .suffix{
+        li{
+            display: inline-block;
+            margin-left: rem(35);
+            &.userTeam{
+                font-weight: 700;
+                margin-left: 0;
+            }
+            .logState{
+                position: relative;
+                margin-left: rem(16);
+                &::before{
+                    content: "";
+                    width: 1px;
+                    height: rem(16);
+                    background: $black;
+                    position: absolute;
+                    left: -9px;
+                    top: 50%;
+                    transform: translateY(-45%);
+                }
+            }
+        }
+    }
+    &.center{
+        justify-content: center;
+        .center{
+            margin-left: 0;
+        }
+    }
+}

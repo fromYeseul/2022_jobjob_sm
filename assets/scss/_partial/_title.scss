@@ -1,0 +1,116 @@
+//로그인 타이틀
+h1{    
+    font-size: rem(54);
+    letter-spacing: -1.93px;
+}
+
+//페이지 타이틀
+.pageTit{
+    @include sideArray;
+    position: relative;
+    padding-bottom: rem(20);
+    &::after{
+        content:'';
+        //220829
+        // width: calc(100% + 80px);
+        width: calc(100% + 70px);
+        //220829
+        height: 1px;
+        background: $titleGray;
+        position: absolute;
+        left: -40px;
+        bottom: 0;
+    }
+    .breadCrumb{
+        //220829
+        // font-size: rem(24);
+        font-size: rem(20);
+        //220829
+        font-weight: 700;
+        li{
+            margin-left: rem(55);
+            position: relative;
+            &::after{
+                content:'';
+                width: rem(18);
+                height: rem(3);
+                background: url(../img/icoGroup.png);
+                background-position: -240px 0;
+                position: absolute;
+                top: 50%;
+                right: -36px;
+                transform: translateY(-50%);
+            }
+            &:last-child{
+                &::after{
+                    display: none;
+                }
+            }
+            a{
+                color: $titleGray;
+            }
+            &.is-active{
+                a{
+                    color: $mainColor;
+                }                
+            }
+        }
+    }
+}
+h2{    
+    //220829
+    // font-size: rem(32);
+    font-size: rem(28);
+    //220829
+    letter-spacing: -1.14px;
+    button{
+        margin-left: rem(20);
+        //220829
+        vertical-align: 2px;
+        //220829
+    }
+}
+
+//페이지 영역타이틀
+h3{
+    //220829
+    // font-size: rem(20);
+    font-size: rem(18);
+    //220829
+    letter-spacing: -0.71px;
+}
+
+//모달 타이틀
+h4{
+    text-align: center;
+    font-size: rem(28);
+    letter-spacing: -1px;
+    margin-bottom: rem(26);
+}
+
+//회원상세 타이틀
+h5{
+    //220829
+    // font-size: rem(24);
+    font-size: rem(20);
+    //220829
+    letter-spacing: -0.86px;
+    + h5{
+        margin-left: rem(27);
+    }
+    + .h5_sub{
+        color: $subInfo;
+        margin-top: rem(12);
+        + button{
+            margin-top: rem(20);
+        }
+    }
+}
+
+//플록메뉴 타이틀
+h6{
+    //220829
+    // font-size: rem(18);
+    font-size: rem(16);
+    //220829
+}

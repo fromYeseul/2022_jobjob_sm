@@ -1,0 +1,38 @@
+
+footer{
+    width: 100%;
+    color: $footerGray;
+    font-size: rem(14);
+    text-align: center;
+    margin-top: rem(160);
+    &.toast{
+        //min-width: rem(1920);
+        width: calc(100% + 60px);
+        margin-top: 0;
+        //220829
+        // padding: rem(33) rem(40);
+        padding: rem(24) rem(40);
+        //220829
+        @include sideArray;
+        color:$white;
+        background: rgba($black, .6);
+        position: absolute;
+        left: -60px;
+        bottom: -120px;
+        z-index: 101;
+        transition: all 1s;
+        &.is-active{
+            bottom:0;
+        }
+        h5{
+            @include heightArray;
+        }
+        button{
+            border:0;
+             + button{
+                margin-left: rem(20);
+             }
+        }
+    }
+}
+

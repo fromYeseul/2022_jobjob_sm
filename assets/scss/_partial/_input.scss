@@ -1,0 +1,706 @@
+
+.inputList{
+    li{
+        margin-bottom: rem(30);
+        // &.half{
+        //     display: inline-block;
+        //     width: 40%;
+        // }
+        > label{
+            display: block;
+        }
+    }
+    .need{
+        //padding-right: rem(10);
+        position: relative;
+        &::after{
+            content:'*';
+            margin-left: rem(4);
+        }
+    }
+    &.column{
+        label{
+            & + input,
+            & + .select{
+                margin-top: rem(10);
+            }
+        }
+        &.half{
+            ul{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                column-gap: rem(30);
+                .full{
+                    grid-column: 1 / 3;
+                }
+            }
+        }
+        &.row{
+            display: grid;
+            column-gap: rem(30);
+            ul{            
+                display: flex;
+                column-gap: rem(30);
+                &.row{
+                    column-gap: rem(6);
+                    grid-column: 3 / span 1;
+                    grid-row: 1 / span 2;
+                }
+                &.gap20{
+                    column-gap: rem(20);
+                }
+            }
+            textarea{
+                height: 100%;
+            }
+        }
+    }
+    // &.grid_row{
+    //     display: grid;
+    //     column-gap: rem(30);
+    //     ul{            
+    //         display: flex;
+    //         column-gap: rem(30);
+    //         &.row{
+    //             grid-column: 3 / span 1;
+    //             grid-row: 1 / span 2;
+    //         }
+    //     }
+    // }
+    // &.columnType{
+    //     >ul{
+    //         display: flex;
+    //         margin-bottom: rem(30);
+    //         &:last-child{
+    //             margin-bottom: 0;
+    //         }
+    //         &.half{
+    //             li{
+    //                 width: 50%;
+    //             }
+    //         }
+    //         li{
+    //             margin-bottom: 0;
+    //             margin-right: rem(30);
+    //             &:last-child{
+    //                 margin-right: 0;
+    //             }
+    //             > ul{
+    //                 display: flex;
+    //                 margin-bottom: rem(30);
+    //             }
+    //         }
+    //     }
+    //     label{
+    //         + input, 
+    //         + .select{
+    //             margin-top: rem(6);
+    //         }
+    //     }
+    // }
+}
+
+/* 공통 */
+label{
+    font-weight: 500;
+    //margin-bottom: rem(6);
+    // & + input[type=text].full,
+    //  input[type=password].full{
+    //     margin-top: rem(6);
+    //  }
+}
+input[type=text],
+input[type=password],
+input[type=date],
+textarea{
+    font-size: rem(14);
+    width: rem(140);
+    padding: rem(16);
+    border-radius: rem(4);
+    border:1px solid $inputGray;   
+    resize: none; 
+    cursor: pointer;
+    &.smSize{
+        width: rem(70);
+    }
+    &.lowSize{
+        height: rem(36);
+    }
+    &.laSize{
+        width: rem(360);
+    }
+    &.wideSize{
+        width: rem(440);
+    }
+    &.xlSize{
+        width: rem(500);
+    }
+    &.full{
+        width: 100%;
+    }
+    &.need{
+        border: 1px solid $error; 
+        &:focus{        
+            border:0;
+            outline: 1px solid $mainColor;
+        } 
+    }
+    &:focus{        
+        outline: 1px solid $mainColor;
+    }
+    &::placeholder{
+        color: $placeholder;
+        //220829
+        // font-size: rem(16);
+        font-size: rem(14);
+        //220829
+    }
+    & + .btnType{
+        margin-left: rem(10);
+    }
+}
+input[type=date]{
+    position: relative;
+    padding: rem(13) rem(16);
+    &::-webkit-calendar-picker-indicator {
+        background: transparent;
+        z-index: 1;
+    }
+    &::after{
+        content:'';
+        width: rem(18);
+        height: rem(18);
+        position: absolute;
+        top: 50%;
+        right: rem(16);
+        transform: translateY(-50%);
+        background: url(../img/icoCal.png) no-repeat;
+    }
+}
+
+
+/* INPUT */
+input[type=text],
+input[type=password]{
+    //220829
+    // height: rem(50);
+    height: rem(46);
+    //220829
+    padding: 0 rem(16);
+}
+
+/* INPUT 좌우아이콘 */
+.inputIco{
+    position: relative;
+    input[type=text],
+    input[type=password]{
+        width: 100%;
+    }
+    .ico{
+        position: absolute;
+        top: 50%;
+        right:rem(14);
+        transform: translateY(-50%);
+        &.is-active{
+            width: 10px;    //임시
+        }
+        + input{
+            padding-left: rem(34);
+        }
+    }
+    i.ico{
+        left:rem(14);
+    }
+    & + .button,
+    & + button{
+        line-height: rem(49);
+        margin-left: rem(4);
+    }
+}
+
+/* INPUT + 버튼 */
+.hasBtn{
+    label{
+        //display: block;
+    }
+    input{
+        // height: rem(50);
+        padding-left: rem(14);
+        & + button{
+            margin-left: rem(4);
+        }
+    }
+    .button,
+    button{
+        //220829
+        // line-height: rem(49);
+        line-height: rem(45);
+        //220829
+        & + input{
+            margin-left: rem(4);
+        }
+        & + .inputIco{
+            margin-left: rem(4);
+        }
+    }
+    .inputIco{
+        display: inline-block;
+    }
+}
+
+/* 칩타입 */
+.inputObj{
+    display: inline-block;
+    padding: rem(2) rem(10);
+    color: $white;
+    background: $placeholder;
+    border-radius: rem(5);
+    &.is-active{
+        background: transparent;
+    }
+    input[type=text]{
+        height: auto;
+        padding: rem(4);
+        border:0;
+    }
+}
+
+/* 파일첨부 */
+input[type=file] {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip:rect(0,0,0,0);
+    border: 0;
+}
+//칩타입, 파일업로드
+.inputGroup {
+    //height: rem(50);
+    padding: rem(10) rem(16);
+    // margin-top: rem(5);
+    // border-radius: rem(7);
+    margin-top: rem(10);
+    border-radius: rem(5);
+    border:1px solid $layoutColor;
+    label{
+        color: $placeholder;
+        font-weight: 400;
+        line-height: rem(29);
+    }
+//     .selFile {     
+//         cursor: pointer;
+//         position: relative;
+//         &::after{
+//             content:'';
+//             width: 100%;
+//             height: 1px;
+//             background: $placeholder;
+//             position: absolute;
+//             left: 0;
+//             bottom: 0;
+//         } 
+//     }
+//    .fileBox {
+//       overflow-y: auto;
+//       max-height: 50px;
+//       li{
+//         margin-bottom: 0;
+//       }
+//     }
+    //파일업로드
+    &.upload{
+        display: inline-block;
+        width: calc(100% - 132px);
+        line-height: rem(28);
+        vertical-align: bottom;
+        .drop{
+            color: $placeholder;
+            display: flex;
+        }
+        .list{
+            li{
+                margin-bottom: 0;
+            }
+        }
+    }
+    &.wide{
+        width: rem(600);
+        margin-top: rem(20);
+        padding: rem(18) rem(110);
+    }
+    .fileName{
+        margin-left: rem(10);
+        vertical-align: text-bottom;
+    }
+    & + label{
+        min-width: rem(90);
+        margin-left: rem(10);
+        line-height: rem(50);
+        padding: 0 rem(15);
+        display: inline-block;
+        color: $white;
+        font-weight: 700;
+        text-align: center;
+        border-radius: rem(6);
+        background-color: $mainColor;
+    }
+    // & + .selFile{
+    //     margin-left: rem(15);
+    // }
+}
+
+a{
+    //이력서 첨부파일
+    &.download{
+        display: block;
+        margin-top: rem(30);
+        padding: rem(15) rem(20);
+        background: $white;
+        //220829
+        // border-radius: rem(7);
+        border-radius: rem(5);
+        //220829
+        img{
+            vertical-align: middle;
+        }
+    }    
+}
+
+
+// .uploadFile {
+//     min-height: 50px;
+//     padding: rem(12) rem(16);
+//     border-radius: rem(5);
+//     border:1px solid $layoutColor;
+// }
+
+
+
+
+
+
+/* TEXTAREA */
+textarea{
+    width: 100%;
+    & + .counter{
+        color: $subInfo;
+        text-align: right;
+        margin-top: rem(10);
+    }
+    &.oneLine{
+        padding: rem(7);
+    }
+}
+.textForm{
+    padding: rem(5);
+    border-radius: rem(4);
+    border:1px solid $inputGray; 
+    textarea{
+        padding: auto;
+        outline: none;
+        border: 0;
+    }
+    & + .btnWrap{
+        margin-top: rem(10);
+    }
+}
+
+/* 체크박스 */
+input[type=checkbox],
+input[type=radio]{
+    display: none;
+    position: relative;
+    + label{
+        display: inline-block;
+        position: relative;
+        &::before{
+            content:'';
+            display: inline-block;
+            //220829    
+            // width: rem(20);
+            // height: rem(20);
+            vertical-align: sub;
+            width: rem(17);
+            height: rem(17);
+            vertical-align: -3px;
+            //220829    
+            background-image: url(../img/icoGroup.png);
+            background-position: 0px 0px;
+        }
+    }
+    &:checked{
+        + label{
+            &::before{
+                background-position: -20px 0;
+            }
+        }
+    }        
+    &.hasTxt{
+        + label{
+            margin-right: rem(10);
+            &::before{
+                margin-right: rem(6);
+            }
+        }
+    }    
+    // 북마크
+    &.bMark{
+        display:none;
+        + label{
+            display:inline-block;
+            //220829
+            // width: rem(20);
+            // height: rem(20);
+            width: rem(17);
+            height: rem(17);
+            //220829
+            background-image: url(../img/icoGroup.png);
+            background-position: 0px -40px;
+            vertical-align: sub;
+            &::before{
+                display: none;
+            }
+        }
+        &:checked{
+            & + label{
+                background-position: -20px -40px;
+            }
+        }
+    }
+    // 토글스위치
+    &.chkSwitch{
+        display: inline-block;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        width: rem(38);  
+        height: rem(21);  
+        border: 1px solid $gray;
+        border-radius: rem(11);  
+        + label{
+            vertical-align: rem(4);
+            &::before{
+                display: none;
+            }
+        }
+        &::after{
+            content:'';
+            width: rem(15);  
+            height: rem(15);  
+            border-radius: 50%;
+            background: $gray;
+            position: absolute;
+            left: rem(2);  
+            top: rem(2);  
+            transform: translateX(0);
+            transition: all .3s ease ;
+        }
+        &:checked{
+            background: $mainColor;
+            border: 1px solid $mainColor;
+            &::after{
+                background: $white;
+                transform: translateX(17px);
+            }
+            &:disabled{
+                background: $disable;
+                border: 1px solid $disable;
+                opacity: .2;
+            }
+        }
+        &:disabled{
+            cursor: not-allowed;
+            opacity: .5;
+            & + label{
+                cursor: not-allowed;
+            }
+        }
+    }
+}
+
+/* 버튼타입 */
+.btnType{
+    input[type=checkbox],
+    input[type=radio]{
+        width: 0;
+        opacity: 0;
+        position: fixed;
+        + label{
+            //width: rem(80);
+            line-height: rem(40);
+            padding: 0 rem(25);
+            margin-right: rem(5);
+            text-align: center;
+            color: $titleGray;
+            font-weight: 500;
+            background: $white;
+            border-radius: rem(5);
+            border: 1px solid $inputGray;
+            &::before{
+                display: none;
+            }
+        }
+        &:checked{
+            + label{
+                color: $mainColor;
+                border: 1px solid $mainColor;
+            }
+        }
+    }
+    input[type=radio]{
+        + label{
+            //220829
+            // line-height: rem(49);
+            line-height: rem(47);
+            //220829
+            margin-right: rem(10);
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+        &:checked{
+            + label{
+                color: $white;
+                border: 1px solid $mainColor;
+                background: $mainColor;
+            }
+        }
+    }
+}
+
+/* 라디오박스 */
+input[type=radio]{
+    + label{
+        &::before{
+            background-position: 0px -20px;
+        }
+    }
+    &:checked{
+        + label{
+            &::before{
+                background-position: -20px -20px;
+            }
+        }
+    }  
+}
+
+/* 탭타입 라디오박스 */
+.tabType{
+    display: flex;
+    input[type=radio]{
+        width: 0;
+        opacity: 0;
+        position: fixed;
+        + label{
+            width: rem(86);
+            //220829
+            // line-height: rem(50);
+            line-height: rem(44);
+            //220829
+            text-align: center;
+            color: $titleGray;
+            font-weight: 500;
+            background: $white;
+            border: 1px solid $inputGray;
+            cursor:pointer;
+            &::before{
+                display: none;
+            }
+            &:nth-child(2){
+                border-radius: rem(4) 0 0 rem(4);
+            } 
+            &:last-child{
+                border-radius: 0 rem(4) rem(4) 0;
+            }
+        }
+        &:checked{
+            + label{
+                color: $white;
+                background-color: $mainColor;
+                border: 1px solid $mainColor;
+            }
+        }
+    }
+}
+
+/* 박스타입 라디오박스 */
+.boxType{
+    display: flex;
+    input[type=radio]{
+        width: 0;
+        opacity: 0;
+        position: fixed;
+        + label{
+            width: 20%;
+            min-width: rem(104);
+            height: rem(90);
+            // margin-left: -1px;
+            // margin-top: -1px;
+            font-weight: 400;
+            padding: rem(20) 0;
+            border: 1px solid $layoutColor;
+            //border-left: 0;
+            text-align: center;
+            @include heightArray;
+            cursor: pointer;
+            cursor: pointer;
+            &::before{
+                display: none;
+            }
+        }
+        &:checked{
+            + label{
+                color: $white;
+                font-weight: 700;
+                background: $mainColor;
+                border: 1px solid $mainColor;
+            }
+        }
+    }
+}
+
+
+/* 별점평가 */
+.starWrap {
+    display: inline-block;
+    overflow: hidden;
+    height: 40px;
+    &:after {
+        content: "";
+        display: block;
+        position: relative;
+        z-index: 10;
+        height: rem(40);
+        background: url("data:image/png;base64,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")
+        repeat-x 0 0;
+        background-size: contain;
+        pointer-events: none;
+    }
+    .starBox {
+        position: relative;
+        //z-index: 1;
+        float: left;
+        width: rem(20);
+        height: rem(40);
+        cursor: pointer;
+        input {
+            //opacity: 0 !important;
+            //height: 0 !important;
+            //width: 0 !important;
+            //position: absolute !important;
+            &:checked + .starImg {
+                background-color: $mainColor;
+            }
+        }
+    }
+    .starImg {
+        //display: block;
+        position: absolute;
+        right: 0;
+        width: 500px;
+        height: 40px;
+        //pointer-events: none;
+    }
+}

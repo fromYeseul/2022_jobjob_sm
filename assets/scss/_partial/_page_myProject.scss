@@ -1,0 +1,164 @@
+.myProjList{
+    .boxListWrap{    
+        //height: calc(100vh - 187px);
+    //220829
+        // height: calc(100vh - 177px);
+        height: calc(100vh - 164px);
+        //220829
+    }
+    .boxList{
+        //220829
+        // height: rem(130);
+        height: rem(115);
+        //220829
+    }
+}
+
+.myProjDetail{
+    .boxWrap{
+        //220829
+        // padding: rem(20) rem(40) rem(30);   
+        padding: rem(30);   
+        //220829
+        &.headType{
+            padding: rem(20) rem(30) rem(30);
+        }
+        & + .boxWrap{
+            margin-top: rem(30);
+        }
+        .boxType{
+            max-height: rem(180);
+            overflow-y: auto;
+            flex-wrap:wrap;
+            //220829
+            // margin: rem(50) 0 rem(30);
+            margin: rem(30) 0 rem(20);
+            //220829
+        }
+        .yScroll{
+            //margin-top: rem(30);
+            //height: calc(100vh - 680px);
+            //height: calc(100vh - 663px);
+            //220829
+            height: calc(100vh - 550px);
+            //220829
+            .tit{
+                margin-top: rem(20);
+            }
+        }
+    }
+}
+
+.myProjJob{
+    //width: 30%;
+    //min-width: rem(616);
+    .boxWrap{
+        margin-top: rem(10);
+    }
+    .partList{
+        height: rem(168);
+        padding: rem(10) rem(8) 0;
+        //border: 1px solid $layoutColor;
+        ul{
+            // height: 100%;
+            padding-right: rem(5);
+            padding-bottom: rem(10);
+            // overflow-y: auto;
+            display: flex;
+            flex-wrap: wrap;
+            li{
+                width: 29.5%;
+                font-size: rem(14);
+                font-weight: 500;
+                margin:rem(9);
+                padding: rem(12) rem(14);
+                border-radius: rem(5);
+                border:1px solid $layoutColor;
+                box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+                cursor: pointer;
+                &.is-active{
+                    border:1px solid $mainColor;
+                }
+                &:first-child{
+                    //220829
+                    // padding: rem(30) rem(14);
+                    padding: rem(28) rem(14);
+                    //220829
+                }
+            }
+            p{
+                @include sideArray;
+                align-items: center;
+                .partWrap,
+                .memNum{
+                    //font-size: rem(18);
+                    font-weight: 700;
+                }
+                .label{
+                    width: rem(44);
+                    font-weight: 400;
+                }
+                .deadline{
+                    font-size: rem(14);
+                }
+                & + p{
+                    margin-top: rem(10);
+                }
+            }
+        }
+    }
+    .tabBtnWrap{
+        //220829
+        // /font-size: rem(18);
+        font-size: rem(16);
+        //220829
+    }
+    .tabContWrap{
+        .inputIco{
+            width: calc(100% - 98px);
+        }
+        .yScroll{
+            //padding-bottom: rem(114);
+            //height: calc(100vh - 558px);
+            //height: calc(100vh - 553px);
+            //padding: rem(20) rem(40);
+            //220829
+            height: calc(100vh - 502px);  
+            padding: rem(20) rem(30); 
+            //220829         
+            transition: height .3s;
+            @include scroll_0;
+            .listTop{
+                margin-top: rem(30);
+            }
+            &.is-active{
+                //220829
+                // height: calc(100vh - 315px);
+                height: calc(100vh - 285px);
+                //220829
+            }
+        }
+        .tabCont{
+            position: relative;
+            .goTop{
+                position: absolute;
+                right: rem(40);
+                bottom: rem(108);
+            }
+        }
+    }
+    //스크롤할 때
+    &.is-active{
+        overflow-y: scroll;
+        //height: calc(100vh - 95px);
+        height: calc(100vh - 70px);
+        .wrap{
+            height: calc(100vh + 63px);
+        }
+        .tabContWrap{
+            .yScroll{
+                height: calc(100vh - 328px);
+            }
+        }
+    }
+}

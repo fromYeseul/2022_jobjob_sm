@@ -1,0 +1,36 @@
+.hasTooltip{
+    position: relative;
+    cursor: pointer;
+    .tooltip{
+        visibility: hidden;
+        display: block;
+        position: absolute;
+        //top: -25%;
+        top: -155%;
+        width: rem(100);
+        color: $white;
+        text-align: center;
+        font-size: rem(12);
+        font-weight: 700;
+        padding: rem(10) rem(15);
+        border-radius: rem(4);
+        background: $tooltipGray;
+        &::after{
+            content: " ";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -6px;
+            border: solid transparent;
+            border-color: transparent;
+            border-top-color: $tooltipGray;
+            border-width: rem(6);
+            pointer-events: none;
+        }
+    }
+    &:hover{
+        .tooltip{
+            visibility: visible;
+        }
+    }
+}

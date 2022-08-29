@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>styleGuide | jobjob</title>
+
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <style>     
+        body.styleguide {
+          width: calc(100% - 30px);
+          margin: 0 auto;
+          margin-bottom:100px;
+        }   
+        .clip {
+          border-left: 10px solid #ccc;
+          border-bottom: 10px solid #f4f5f9;
+          margin-top: 80px;
+          margin-bottom: 30px;
+        }    
+        .clip > span {position: absolute;}
+        hr {border: 0;}
+
+    </style>
+    
+</head>
+<body class="styleguide">    
+
+    <!-- ys: 버튼태그 -> a태그 변환 가능 : class="button" 추가 -->
+    
+    <div class="clip"><span>사이즈별 default 버튼</span></div>
+    <hr>      
+        <button class="fullSize">fullSize</button>
+        <button class="laSize">laSize</button>
+        <button class="midSize">midSize</button>
+        <button class="smSize">smSize</button>
+
+    <div class="clip"><span>비활성 버튼</span></div>
+    <hr>   
+        <button class="laSize" disabled>비활성</button>
+        <button class="white" disabled>white</button>
+
+    <div class="clip"><span>화이트 버튼</span></div>
+    <hr>   
+        <button class="white">white</button>
+        <button class="white smType">smallf</button>
+
+    <div class="clip"><span>아이콘 버튼</span></div>
+    <hr>   
+    <button class="white">
+        <i class="ico download"></i>
+        엑셀저장
+    </button>
+    
+    <div class="clip"><span>라운드 버튼</span></div>
+    <hr>   
+        <button class="round">round</button>
+
+    <div class="clip"><span>상태별 라운드 버튼</span></div>
+    <hr>   
+        <button class="round order">order</button>
+        <button class="round cancel">cancel</button>
+        <button class="round checking">checking</button>
+        <button class="round short">short</button>
+        <button class="round reject">reject</button>
+
+    <div class="clip"><span>라벨 버튼</span></div>
+    <hr>
+        <button class="label">button</button>
+        <span class="button label">span</span>
+
+    <div class="clip"><span>버튼 가운데 정렬</span></div>
+    <hr>
+        <div class="btnWrap center">            
+            <button class="laSize">등록</button>
+            <button class="laSize">취소</button>
+        </div>  
+
+    <div class="clip"><span>버튼 좌측 정렬</span></div>
+    <hr>
+        <div class="btnWrap right">            
+            <button class="laSize">등록</button>
+            <button class="laSize">취소</button>
+        </div>          
+    <!--//버튼-->
+    
+
+    <div class="clip"><span>인풋박스</span></div>
+    <hr>
+        <label for="project">프로젝트 이름</label>
+        <input class="smSize" type="text" id="project" maxlength="" placeholder="프로젝트 이름을 입력하세요.">
+        <br>
+        <label for="project">프로젝트 이름</label>
+        <input class="" type="text" id="project" maxlength="" placeholder="프로젝트 이름을 입력하세요.">
+        <br>
+        <label for="project">프로젝트 이름</label>
+        <input class="laSize" type="text" id="project" maxlength="" placeholder="프로젝트 이름을 입력하세요.">
+        <br>
+        <label for="project">프로젝트 이름</label>
+        <input class="wideSize" type="text" id="project" maxlength="" placeholder="프로젝트 이름을 입력하세요.">
+        <br>
+        <label for="project">프로젝트 이름</label>
+        <input class="full" type="text" id="project" maxlength="" placeholder="프로젝트 이름을 입력하세요.">
+    
+    <div class="clip"><span>좌측 아이콘 인풋박스</span></div>
+    <hr>
+        <label for="search">검색</label>
+        <div class="inputIco">
+            <i class="ico search"></i>
+            <input type="text" id="search" class="" maxlength="" placeholder="검색어를 입력하세요.">
+        </div>
+        
+    <div class="clip"><span>우측 아이콘 인풋박스</span></div>
+    <hr>
+        <label for="search">검색</label>
+        <div class="inputIco">
+            <input type="text" id="search" class="" maxlength="" placeholder="검색어를 입력하세요.">
+            <button class="ico search"></button>
+        </div>
+
+    <div class="clip"><span>양쪽 아이콘 인풋박스, 에러메시지</span></div>
+    <hr>
+        <label for="search">아이디</label>
+        <div class="inputIco">
+            <i class="ico search"></i>
+            <input type="text" id="search" class="" maxlength="" placeholder="검색어를 입력하세요.">
+            <button class="ico search"></button>
+        </div>
+        <p class="error is-active">* 아이디가 틀렸습니다.</p>
+    
+    <div class="clip"><span>패스워드 인풋박스 + 해제</span></div>
+    <hr>        
+        <label for="pw">비밀번호</label>
+        <div class="inputIco">
+            <input type="password" id="pw" maxlength="" placeholder="비밀번호를 입력하세요.">
+            <button class="ico showPw"></button>
+        </div>
+        <p class="error is-active">* 비밀번호가 틀렸습니다.</p>
+
+    <div class="clip"><span>인풋박스 + 버튼</span></div>
+    <hr>
+        <div class="hasBtn">
+            <label for="project2">검색</label>
+            <input type="text" id="project2" maxlength="" placeholder="프로젝트 이름을 입력하세요.">
+            <button class="midSize">검색</button>
+        </div>
+
+    <div class="clip"><span>우측 아이콘 인풋박스 + 버튼</span></div>
+    <hr>        
+        <div class="hasBtn">         
+            <label for="search">검색</label>
+            <div class="inputIco">
+                <input type="text" id="search" class="" maxlength="" placeholder="검색어를 입력하세요.">
+                <button class="ico search"></button>
+            </div>   
+            <button class="midSize">검색</button>
+        </div>        
+    
+    <div class="clip"><span>버튼 + 인풋박스</span></div>
+    <hr>
+        <div class="hasBtn">
+            <label for="project2">검색</label>
+            <button class="midSize">검색</button>
+            <input type="text" id="project2" maxlength="" placeholder="프로젝트 이름을 입력하세요.">
+        </div>
+
+    <div class="clip"><span>버튼 + 우측 아이콘 인풋박스</span></div>
+    <hr>        
+        <div class="hasBtn">         
+            <label for="search">검색</label>
+            <button class="midSize">검색</button>
+            <div class="inputIco">
+                <input type="text" id="search" class="" maxlength="" placeholder="검색어를 입력하세요.">
+                <button class="ico search"></button>
+            </div>   
+        </div>
+
+    <div class="clip"><span>칩타입 인풋박스<span></div>
+    <hr>
+        <div class="inputGroup">
+            <div class="inputObj">
+                <span>박예슬 (010-000-0000)</span>
+                <button class="ico smClose"></button>
+            </div>
+            <div class="inputObj is-active">
+                <input type="text">
+            </div>
+        </div>          
+    <!--//인풋박스-->
+
+
+
+    <div class="clip"><span>파일첨부</span></div>
+    <hr>
+        <div class="inputGroup">
+            <label for="fileUpload">여기에 첨부 파일을 끌어오세요. 또는 </label>
+            <input multiple type="file" id="fileUpload">
+            <label for="fileUpload" class="selFile">직접선택</label>
+
+            <div class="fileBox">
+                <ul>
+                    <li class="fileList"></li>
+                </ul>
+            </div>
+        </div>   
+
+        
+    <div class="clip"><span>다중 파일첨부</span></div>
+    <hr>
+        <div class="uploadBox">
+            <div class="inputGroup upload">
+                <div class="drop">여기에 첨부 파일을 끌어오세요.</div>
+                <div class="list">
+                    <ul class="list_ul"></ul>
+                </div>
+            </div>
+        
+            <label for="cycleDocument" class="">또는 직접선택</label>
+            <input type="file" name="cycleDocument" id="cycleDocument" class="" tabindex="" />
+        </div>
+    <!--//파일첨부-->
+
+
+    <div class="clip"><span>텍스트영역(내부버튼)</span></div>
+    <hr>
+        <textarea name="" id="" rows="10"></textarea>
+        <p class="counter">글자 수 50자</p>
+
+    <div class="clip"><span>텍스트영역(내부버튼)</span></div>
+    <hr>
+        <div class="textForm">
+            <textarea name="" id="" rows="10"></textarea>
+            <div class="btnWrap right">
+                <button class="smSize">등록</button>
+            </div>  
+        </div>
+        
+    <div class="clip"><span>텍스트영역(외부버튼)</span></div>
+    <hr>
+        <div class="textForm">
+            <textarea name="" id="" rows="10"></textarea>
+        </div>
+        <div class="btnWrap center">
+            <button class="smSize">등록</button>
+        </div>  
+    <!--//텍스트영역-->
+
+
+
+    <div class="clip"><span>체크박스</span></div>
+    <hr>
+        <input type="checkbox" id="galaxy" name="mobile">
+        <label for="galaxy"></label>
+        <input type="checkbox" id="iphone" name="mobile">
+        <label for="iphone"></label>
+        <input type="checkbox" id="note" name="mobile" checked>
+        <label for="note"></label>
+
+    <div class="clip"><span>텍스트 있는 체크박스</span></div>
+    <hr>        
+        <input type="checkbox" id="a1" name="aa" class="hasTxt">
+        <label for="a1">galaxy</label>
+        <input type="checkbox" id="a2" name="aa" class="hasTxt" checked>
+        <label for="a2">iphone</label>
+
+    <div class="clip"><span>즐겨찾기</span></div>
+    <hr>
+        <input type="checkbox" id="bookMark" class="bMark" name="bMark" checked>
+        <label for="bookMark"></label>    
+
+    <div class="clip"><span>스위치토글</span></div>
+    <hr>
+        <input id="s2" type="checkbox" class="chkSwitch">
+        <label for="s2">Switch</label>
+        <input id="s22" type="checkbox" class="chkSwitch" disabled>
+        <label for="s22">disabled</label>
+        <input id="s222" type="checkbox" class="chkSwitch" checked disabled>
+        <label for="s222">chk disabled</label>
+
+    
+    <div class="clip"><span>버튼타입 체크박스</span></div>
+    <hr>                
+        <div class="btnType">
+            <input type="checkbox" id="b1" name="aa" class="hasTxt">
+            <label for="b1">galaxy</label>
+            <input type="checkbox" id="b2" name="aa" class="hasTxt" checked>
+            <label for="b2">iphone</label>
+        </div>
+
+
+    <div class="clip"><span>체크박스 전체선택 <span style="color: greenyellow">여러개 구분하기</span></span></div>
+    <hr>
+        <div class="chkWrap btnType">
+            <input type="checkbox" id="chkAll" class="chkAll">
+            <label for="chkAll">전체</label>
+            
+            <input type="checkbox" id="chk_1" class="chkEach" checked>
+            <label for="chk_1">에코</label>
+            
+            <input type="checkbox" id="chk_2" class="chkEach" >
+            <label for="chk_2">협력</label>
+            
+            <input type="checkbox" id="chk_3" class="chkEach" >
+            <label for="chk_3">대행</label>  
+
+            <input type="checkbox" id="chk_4" class="chkEach" >
+            <label for="chk_4">대행</label>            
+        </div>
+
+        <div class="chkWrap btnType">
+            <input type="checkbox" id="chkAAll" class="chkAll">
+            <label for="chkAAll">전체 동의</label>
+            
+            <input type="checkbox" id="chk_5" class="chkEach" checked>
+            <label for="chk_5">동의</label>
+            
+            <input type="checkbox" id="chk_6" class="chkEach" >
+            <label for="chk_6">서비스</label>
+            
+            <input type="checkbox" id="chk_7" class="chkEach" >
+            <label for="chk_7">마케팅</label>            
+        </div>
+    <!--//체크박스-->
+
+
+
+    <div class="clip"><span>라디오박스</span></div>
+    <hr>
+        <input type="radio" id="apple" name="fruits" value="apple" checked>
+        <label for="apple"></label>
+        <input type="radio" id="banana" name="fruits" value="banana">
+        <label for="banana"></label>
+        
+    <div class="clip"><span>텍스트 있는 라디오박스</span></div>
+    <hr>
+        <input type="radio" id="mug" name="cup" value="mug" class="hasTxt" checked>
+        <label for="mug">apple</label>
+        <input type="radio" id="glass" name="cup" value="glass" class="hasTxt">
+        <label for="glass">banana</label>
+
+    <div class="clip"><span>탭타입 라디오박스</span></div>
+    <hr>        
+        <div class="tabType">
+            <input type="radio" id="americano" name="coffee" value="americano" checked>
+            <label for="americano">아메리카노</label>
+            <input type="radio" id="latte" name="coffee" value="latte">
+            <label for="latte">라떼</label>
+        </div>
+
+    <div class="clip"><span>별점</span></div>
+    <hr>
+        <div class="starWrap">
+            <label class="starBox">
+                <input type="radio" name="star" id="">
+                <span class="starImg">
+                    <span class="blind">별 0.5개</span>
+                </span>
+            </label>
+            <label class="starBox">
+                <input type="radio" name="star" id="">
+                <span class="starImg">
+                    <span class="blind">별 1개</span>
+                </span>
+            </label>
+            <label class="starBox">
+                <input type="radio" name="star" id="">
+                <span class="starImg">
+                    <span class="blind">별 1.5개</span>
+                </span>
+            </label>
+            <label class="starBox">
+                <input type="radio" name="star" id="">
+                <span class="starImg">
+                    <span class="blind">별 2개</span>
+                </span>
+            </label>
+            <label class="starBox">
+                <input type="radio" name="star" id="">
+                <span class="starImg">
+                    <span class="blind">별 2.5개</span>
+                </span>
+            </label>
+            <label class="starBox">
+                <input type="radio" name="star" id="">
+                <span class="starImg">
+                    <span class="blind">별 3개</span>
+                </span>
+            </label>
+            <label class="starBox">
+                <input type="radio" name="star" id="">
+                <span class="starImg">
+                    <span class="blind">별 3.5개</span>
+                </span>
+            </label>
+            <label class="starBox">
+                <input type="radio" name="star" id="">
+                <span class="starImg">
+                    <span class="blind">별 4개</span>
+                </span>
+            </label>
+            <label class="starBox">
+                <input type="radio" name="star" id="">
+                <span class="starImg">
+                    <span class="blind">별 4.5개</span>
+                </span>
+            </label>
+            <label class="starBox">
+                <input type="radio" name="star" id="">
+                <span class="starImg">
+                    <span class="blind">별 5개</span>
+                </span>
+            </label>
+        </div>
+    <!--//라디오박스-->
+
+
+
+    <div class="clip"><span>셀렉트박스(여러개)</span></div>
+    <hr>
+        <!-- <label for="pet">Choose a pet:</label>
+        <select name="pet" id="pet">
+            <option value="">option</option>
+            <option value="dog">Dog</option>
+            <option value="cat">Cat</option>
+            <option value="hamster">Hamster</option>
+            <option value="parrot">Parrot</option>
+            <option value="spider">Spider</option>
+            <option value="goldfish">Goldfish</option>
+        </select> -->
+
+
+        <div class="selectBoxList">
+            <div class="select">
+                <span class="selDefault">fruits</span>
+                <ul class="optionList">
+                    <li class="optionItem">apple</li>
+                    <li class="optionItem">orange</li>
+                    <li class="optionItem">grape</li>
+                    <li class="optionItem">melon</li>
+                </ul>
+            </div>            
+            <div class="select">
+                <span class="selDefault">fruits</span>
+                <ul class="optionList">
+                    <li class="optionItem">apple</li>
+                    <li class="optionItem">orange</li>
+                    <li class="optionItem">grape</li>
+                    <li class="optionItem">melon</li>
+                </ul>
+            </div>
+            <div class="select">
+                <span class="selDefault">fruits</span>
+                <ul class="optionList">
+                    <li class="optionItem">apple</li>
+                    <li class="optionItem">orange</li>
+                    <li class="optionItem">grape</li>
+                    <li class="optionItem">melon</li>
+                </ul>
+            </div> 
+        </div>
+    <!--//셀렉트박스-->
+
+    <div class="clip"><span>셀렉트박스(사이즈별)</span></div>
+    <hr>
+    
+        <div class="select lowSize">
+            <span class="selDefault">10개씩</span>
+            <ul class="optionList">
+                <li class="optionItem">20개씩</li>
+                <li class="optionItem">50개씩</li>
+                <li class="optionItem">100개씩</li>
+            </ul>
+        </div>
+
+        <div class="select">
+            <span class="selDefault">10개씩</span>
+            <ul class="optionList">
+                <li class="optionItem">20개씩</li>
+                <li class="optionItem">50개씩</li>
+                <li class="optionItem">100개씩</li>
+            </ul>
+        </div>
+
+        <div class="select laSize">
+            <span class="selDefault">10개씩</span>
+            <ul class="optionList">
+                <li class="optionItem">20개씩</li>
+                <li class="optionItem">50개씩</li>
+                <li class="optionItem">100개씩</li>
+            </ul>
+        </div>
+
+        <div class="select wideSize">
+            <span class="selDefault">10개씩</span>
+            <ul class="optionList">
+                <li class="optionItem">20개씩</li>
+                <li class="optionItem">50개씩</li>
+                <li class="optionItem">100개씩</li>
+            </ul>
+        </div>
+
+
+
+    <div class="clip"><span style="color:#ccc;">셀렉트박스(직접입력)</span></div>
+    <hr>
+        <label for="pet">Choose a pet:</label>
+        <select name="pet" id="pet">
+            <option value="">option</option>
+            <option value="dog">Dog</option>
+            <option value="cat">Cat</option>
+            <option value="hamster">Hamster</option>
+            <option value="parrot">Parrot</option>
+            <option value="spider">Spider</option>
+            <option value="goldfish">Goldfish</option>
+        </select>
+        <input type="text" id="directInput" name="directInput">
+    <!--//셀렉트박스(직접입력)-->
+
+
+
+    <div class="clip"><span>날짜</span></div>
+    <hr>
+    <input type="date">
+    <!--//날짜-->
+
+
+
+    <div class="clip"><span>로딩이미지</span></div>
+    <div class="clip"><span>테이블(가로타입)</span></div>
+    <hr>
+        <table class="colType">
+            <thead>
+                <tr>
+                    <th colspan="2">headerheaderheader</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>body</td>
+                    <td>body</td>
+                </tr>
+                <tr>
+                    <td>body</td>
+                    <td>body</td>
+                </tr>
+                <tr>
+                    <td>body</td>
+                    <td>body</td>
+                </tr>
+            </tbody>
+        </table>
+    <!--//테이블(가로타입)-->
+
+
+
+    <div class="clip"><span>테이블(세로타입)</span></div>
+    <hr>
+        <table class="rowType">
+            <tbody>
+                <tr>
+                    <th rowspan="2">headerheader</th>
+                    <td>body</td>
+                    <td>body</td>
+                </tr>
+                <tr>
+                    <td>body</td>
+                    <td>body</td>
+                </tr>
+                <tr>
+                    <th>header</th>
+                    <td>body</td>
+                    <td>body</td>
+                </tr>
+            </tbody>
+        </table>
+    <!--//테이블(세로타입)-->
+
+
+
+    <div class="clip"><span style="color:#ccc;">테이블(drag&drop)</span></div>
+    <hr>
+    <!--//테이블(drag&drop)-->
+
+    <div class="clip"><span>페이징 -1</span></div>
+    <hr>
+    <div class="listBottom pagingType">                        
+        <div class="paging">
+            <ul>
+                <li><a href="#">
+                    <span class="ico left"></span>
+                </a></li>
+                <li>
+                    3개 중 <span class="is-active">1-3</span>
+                </li>
+                <li><a href="#">
+                    <span class="ico right is-active"></span>
+                </a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="listBottom pagingType">                        
+        <div class="paging">
+            <ul>
+                <li class="pagingDouble">
+                    <a href="#">
+                        <span class="ico left2_dou"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="ico left2"></span>
+                    </a>
+                </li>
+                <li class="is-active">1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>10</li>
+                <li>
+                    <a href="#">
+                        <span class="ico right2 is-active"></span>
+                    </a>
+                </li>
+                <li class="pagingDouble">
+                    <a href="#">
+                        <span class="ico right2_dou is-active"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--페이징-->
+
+
+
+
+    <div class="clip"><span>데이트피커</span></div>
+    <hr>
+    <!--//데이트피커-->
+    
+
+
+    <div class="clip"><span> 기간검색</span></div>
+    <hr>
+    <!--//기간검색-->
+
+
+
+    <div class="clip"><span>툴팁박스</span></div>
+    <hr>
+        <div class="hasTooltip">
+            <div class="">안녕하세요.</div>
+            <div class="tooltip"> Hi~</div>
+        </div>
+    <!--//툴팁박스-->
+
+
+
+    <div class="clip"><span>토스트팝업</span></div>
+    <hr>
+    <!--//토스트팝업-->
+
+
+
+    <div class="clip"><span>bottom 토스트팝업</span></div>
+    <hr>
+    <!--//bottom 토스트팝업-->
+
+
+
+    <div class="clip"><span>레이어팝업</span></div>
+    <hr>   
+        <a href="#layer01" class="layerOpen">팝업오픈 버튼</a>
+        <div id="layer01" class="modalLayer center">
+            <div class="layerBox">
+                <div class="modalHeader">
+                    <button class="ico layerClose"></button>
+                </div>
+                <div class="modalCont">
+                    <div class="tabWrapper">
+                        <ul class="tabBtnWrap btnType wideType">
+                            <li class="tabBtn">
+                                <a href="#offer_message" class="is-active">문자</a>
+                            </li>
+                            <li class="tabBtn">
+                                <a href="#offer_mail">메일</a>
+                            </li>
+                        </ul>
+                        <div class="tabContWrap">
+                            <div id="offer_message" class="tabCont is-active">
+    
+                                <div class="inputList">   
+                                    <ul>
+                                        <li>
+                                            <label class="need" for="receiver">받는 사람</label>
+                                            <div class="inputGroup">
+                                                <div class="inputObj">
+                                                    <span>박예슬 (010-000-0000)</span>
+                                                    <button class="ico smClose"></button>
+                                                </div>
+                                                <div class="inputObj is-active">
+                                                    <input type="text">
+                                                </div>
+                                            </div>    
+                                        </li>
+                                        <li>
+                                            <label for="receiver">첨부파일</label>
+                                            <div class="inputGroup">
+                                                <label for="fileUpload">여기에 첨부 파일을 끌어오세요. 또는 </label>
+                                                <input multiple type="file" id="fileUpload">
+                                                <label for="fileUpload" class="selFile">직접선택</label>
+                                    
+                                                <div class="fileBox">
+                                                    <ul>
+                                                        <li class="fileList"></li>
+                                                    </ul>
+                                                </div>
+                                            </div>   
+                                        </li>
+                                        <li>
+                                            <textarea name="" id="" rows="13"></textarea>
+                                            <p class="counter">글자 수 50자</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="offer_mail" class="tabCont">bbb</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modalFooter">
+                        <button class="fullSize white prefix">닫기</button>
+                        <button class="fullSize suffix">문자보내기</button>
+                </div>
+            </div>        
+            <div class="layerDim"></div>    
+        </div>
+        <a href="#layer02" class="layerOpen">팝업오픈 버튼</a>
+        <div id="layer02" class="modalLayer center">
+            <div class="layerBox">
+                <div class="modalHeader">
+                    <span class="tit">타이틀</span>
+                    <button class="layerClose">닫기버튼</button>
+                </div>
+                <div class="modalCont">
+                    <p>컨텐츠22222</p>
+                </div>
+                <div class="modalFooter">
+                    <p class="btnCover">
+                        <button class="">확인</button>
+                    </p>
+                </div>
+            </div>        
+            <div class="layerDim"></div>    
+        </div>
+    <!--//레이어팝업-->
+
+    
+
+    <div class="clip"><span>탭</span></div>
+    <hr>
+        <div class="tabWrapper" id="tab01">
+            <ul class="tabBtnWrap">
+                <li class="tabBtn">
+                    <a href="#tab-1" class="is-active">menu1</a>
+                </li>
+                <li class="tabBtn">
+                    <a href="#tab-2">menu2</a>
+                </li>
+                <li class="tabBtn">
+                    <a href="#tab-3">menu3</a>
+                </li>
+            </ul>
+            <div class="tabContWrap">
+                <div id="tab-1" class="tabCont is-active">aaa</div>
+                <div id="tab-2" class="tabCont">bbb</div>
+                <div id="tab-3" class="tabCont">ccc</div>
+            </div>
+        </div>
+        <div class="tabWrapper" id="tab02">
+            <ul class="tabBtnWrap">
+                <li class="tabBtn">
+                    <a href="#bbb-1" class="is-active">menu1</a>
+                </li>
+                <li class="tabBtn">
+                    <a href="#bbb-2">menu2</a>
+                </li>
+                <li class="tabBtn">
+                    <a href="#bbb-3">menu3</a>
+                </li>
+            </ul>
+            <div class="tabContWrap">
+                <div id="bbb-1" class="tabCont is-active">aaa</div>
+                <div id="bbb-2" class="tabCont">bbb</div>
+                <div id="bbb-3" class="tabCont">ccc</div>
+            </div>
+        </div>
+    <!--//탭-->
+
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- <script src="../assets/js/script.js"></script> -->
+
+    <script>
+        if(window.FileReader) { 
+            addEventHandler(window, 'load', function() {
+            var drop   = document.getElementsByClassName('drop')[0];
+            var list   = document.getElementsByClassName('list')[0];
+
+            var list_ul = document.getElementsByClassName('list_ul')[0];
+        
+            function cancel(e) {
+                if (e.preventDefault) { 
+                e.preventDefault(); 
+                }
+                return false;
+            }
+  
+            // Tells the browser that we *can* drop on this target
+            addEventHandler(drop, 'dragover', cancel);
+            addEventHandler(drop, 'dragenter', cancel);
+            addEventHandler(drop, 'drop', function (e) {
+            e = e || window.event; // get window.event if e argument missing (in IE)   
+  
+            if (e.preventDefault) { 
+            e.preventDefault(); 
+            } // stops the browser from redirecting off to the image.
+  
+            var dt = e.dataTransfer;
+            var files = dt.files;
+            for (var i=0; i<files.length; i++) {
+            var file = files[i];
+            var reader = new FileReader();
+    
+            //attach event handlers here...
+            reader.readAsDataURL(file);
+            addEventHandler(reader, 'loadend', function(e, file) {
+                var bin = this.result; 
+    
+                //	div.list...
+                var newFile       = document.createElement('li');
+                newFile.innerHTML = '<i class="ico delete"></i>' + '<span class="fileName">' + file.name + '</span>' + '<span class="float_r">' + file.size +' bytes' + '</span>';
+                    list_ul.appendChild(newFile);  
+                }.bindToEventHandler(file));
+            }
+            return false;
+        });
+  
+            Function.prototype.bindToEventHandler = function bindToEventHandler() {
+                var handler = this;
+                var boundParameters = Array.prototype.slice.call(arguments);
+                //create closure
+                return function(e) {
+                e = e || window.event; // get window.event if e argument missing (in IE)   
+                boundParameters.unshift(e);
+                handler.apply(this, boundParameters);
+                };
+            };
+        });
+    } else { 
+        //document.getElementsByClassName('status')[0].innerHTML = 'Your browser does not support the HTML5 FileReader.';
+    }
+    function addEventHandler(obj, evt, handler) {
+        if(obj.addEventListener) {
+        // W3C method
+        obj.addEventListener(evt, handler, false);
+        } else if(obj.attachEvent) {
+        // IE method.
+        obj.attachEvent('on'+evt, handler);
+        } else {
+        // Old school method.
+        obj['on'+evt] = handler;
+        }
+    }
+    </script>
+</body>
+</html>

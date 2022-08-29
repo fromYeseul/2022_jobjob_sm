@@ -1,0 +1,60 @@
+//로그인
+.login{
+    text-align: center;
+    .tit{
+        span{
+            font-size: rem(14);
+            font-weight: 500;
+            color: $titleGray;
+        }
+    }
+}
+.loginBox{
+    //220829
+    // width: rem(450); 
+    // padding: rem(50) rem(45);
+    width: rem(400); 
+    padding: rem(40);
+    font-size: rem(14);
+    //220829
+    margin: rem(30) auto;
+    text-align:left;
+    border-radius: rem(14);
+    background: $white;
+    input{
+        //220829
+        // height: rem(50);
+        height: rem(44);
+        //220829
+        margin-bottom: rem(10);
+    }
+    button{
+        margin-top: rem(32);
+        font-size: rem(18);
+    }
+}
+.subLogin{
+    //220829
+    font-size: rem(14);
+    //220829
+    li{
+        display: inline-block;
+        margin:0 rem(20);
+        position: relative;
+        &::after{
+            content:'';
+            width: 1px;
+            height: rem(16);
+            background: $gray;
+            position: absolute;
+            right: -20px;
+            top: 50%;
+            transform: translateY(-8px);
+        }
+        &:last-child{
+            &::after{
+                display: none;
+            }
+        }
+    }
+}

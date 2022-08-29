@@ -1,0 +1,143 @@
+
+/* SELECT */
+// select{    
+//     //display: block;
+//     width: rem(100);
+//     height: rem(50);
+//     padding-left: rem(14);
+//     border-radius: rem(4);
+//     border: 1px solid $inputGray;
+//     //화살표 수정
+//     appearance: none;
+//     -webkit-appearance: none;
+//     -moz-appearance: none;
+//     background: url(../img/icoSelect.png) no-repeat;
+//     background-position: right rem(14) top 50%;
+//     &:focus{
+//         outline: none;
+//     }
+//     & + input[type=text]{
+//         width:auto;
+//     }
+// }
+
+
+
+.select {
+  position: relative;
+  display: inline-block;
+  width: rem(100);
+  font-size: rem(14);
+  font-weight: 500;
+  text-align: left !important;
+  background: $white;
+  border-radius: rem(4);
+  border: 1px solid $inputGray;
+  cursor: pointer;
+  &::before{
+    content: '';
+    width: rem(12);
+    height: rem(6);
+    background: url(../img/icoSelect.png) no-repeat;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-40%); 
+    right: rem(10); 
+  }
+  .selDefault{
+    display: block;
+    //text-align: left;
+    font-weight: 500;
+    //220829
+    // line-height: rem(48);
+    line-height: rem(44);
+    //220829
+    padding-left: rem(10);
+  }
+  .optionList {
+    display: none !important;
+    position: absolute; 
+    top: rem(53);
+    left: -1px;
+    width: calc(100% + 2px);
+    color: $subInfo;
+    padding: 0;
+    border-radius: rem(4);
+    border:1px solid $selOptList;
+    background: $white;
+    z-index: 10;
+    .optionItem {
+      display: block;
+      padding: rem(8) rem(10);
+      margin: 0;      
+      &:hover {
+        color: $black;
+        font-weight: 500;
+        background: $selHover;
+      }
+      label{
+        font-weight: 400;
+        vertical-align: middle;
+      }
+      p{
+        font-size: rem(12);
+      }
+    }
+  }
+  &.lowSize{
+    width: rem(100);
+    //220829
+    // line-height: rem(40);
+    line-height: rem(36);
+    //220829
+    .selDefault{
+      //220829
+      // line-height: rem(38);
+      //220829
+      line-height: rem(34);
+    }
+    .optionList {
+      top: rem(43);
+      .optionItem {
+        padding: 0 rem(10);
+      }
+    }
+  }
+  &.smSize{
+    width: rem(86);
+    line-height: rem(28);
+    .selDefault{
+      line-height: rem(28);
+    }
+    .optionList {
+      top: rem(33);
+    }
+  }
+  &.laSize{
+    width: rem(130);
+  }
+  &.wideSize{
+    width: rem(180);
+  }
+  //체크박스를 가진 select
+  label{
+    display: block;
+    &::before{
+      vertical-align: middle;
+    }
+  }
+  & + .select{
+    margin-left: rem(10);
+  }
+  &.is-active{
+    border: 1px solid $mainColor;
+    &::before{
+      top: 45%;
+      transform: rotate(180deg);
+      background: url(../img/icoSelect.png) no-repeat;
+    }
+    .optionList {
+      display: block !important;
+    }
+  }
+}

@@ -1,0 +1,129 @@
+.modalLayer{
+    position: absolute;
+    display: none;
+    visibility: hidden;
+    z-index: 1000;
+    &.is-active{
+        display: block;
+        visibility: visible;
+    }
+    &.center{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+    }    
+    .layerBox{
+        position: relative;
+        overflow-y: auto;
+        width: rem(570);
+        max-height: 80%;
+        padding: rem(40);
+        top:50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background: $white;
+        border-radius: rem(4);
+        border:1px solid $layoutColor;
+        z-index: 10;
+        &.smSize{
+            width: rem(380);
+            padding: rem(45);
+        }
+        &.confirmType{
+            width: rem(330);
+            padding: rem(30) rem(45);
+        }
+    }
+    .layerDim{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(0,0,0,0.5);
+        z-index: 5;
+    }
+}
+
+.modalHeader{
+    text-align: center;
+    @include clear_float;
+    .layerClose{
+        float: right;
+    }
+}
+.modalCont{
+    margin-top: rem(10);
+    &.center{
+        text-align: center;
+        .select{
+            margin:0 auto;
+            text-align: left;
+        }
+    }
+    .tabBtnWrap{
+        text-align: center;
+    }
+    .inputList{
+        margin-top: rem(50);
+    }
+    p{
+        margin-bottom: rem(16);
+    }
+}
+.modalFooter{
+    //width: 100%;
+    //background: $white;
+    margin-top: rem(40);
+    @include flex_1_2;
+    &.halfType{
+        @include flex_1_1;
+    }
+    &.pagingType{
+        padding: rem(40);
+        @include heightArray;
+    }
+    button{
+        + button{
+            margin-left: rem(10);
+        }
+    }
+}
+.modalInfo{
+    font-size: rem(14);
+    margin-top: rem(40);
+    padding-top: rem(20);
+    position: relative;
+    &::before{
+        content:'';
+        width: calc(100% + 90px);
+        height: 1px;
+        background: $layoutColor;
+        position: absolute;
+        top: 0;
+        left: -45px;
+    }
+    p{
+        font-weight: 500;
+    }
+    .list{
+        color: $subInfo;
+        li{
+            margin-left: rem(12);
+            margin-top: rem(14);
+            position: relative;
+            &::before{
+                content:'';
+                width: 5px;
+                height: 1px;
+                background: $subInfo;
+                position: absolute;
+                top: rem(10);
+                left: -9px;
+            }
+        }
+    }
+}

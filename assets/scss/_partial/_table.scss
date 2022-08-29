@@ -1,0 +1,135 @@
+.tableTop{
+    @include sideArray;
+    margin-bottom: rem(10);   
+}
+.tableBox{
+    overflow-y: auto;
+    th{
+        position: sticky;
+        top:0;
+    }
+}
+
+
+
+
+
+
+table{
+    width: 100%;
+    //220829
+    font-size: rem(14);
+    //220829
+    th, td{
+        text-align: center;
+        background: $white;
+        border-top: 1px solid $tableBorder;
+        border-bottom: 1px solid $tableBorder;
+        .select{
+            text-align: left;
+            color: $black;
+        }
+    }
+    th{
+        color: $white;
+        font-weight: 500;
+        padding: rem(12) 0;
+        border-top: none;
+        background: $tableBgGray;
+    }
+    td{
+        color: $tableGray;
+        //220829
+        // padding: rem(14) 0;
+        padding: 0;
+        //220829
+        &.nodata{
+            display: table-cell;
+            font-weight: 500;
+            background: transparent;
+        }
+        &.right{
+            text-align: right;
+        }
+    }
+    tr{
+        &:last-child{
+            td{
+                border-bottom: 0;
+            }
+        }
+    }
+    tfoot{
+        td{
+            padding: rem(18);
+            background: $bgColor;
+            border-bottom: 0;
+        }
+    }
+    &.hasInput{
+        td{
+            padding: rem(10);
+        }
+    }
+    .ellipsis{
+        @include ellipsis;
+        padding: rem(14);
+    }
+    a{
+        color: $mainColor;
+        cursor: pointer;
+    }
+    .memo{
+        padding: rem(16);
+        position: relative;
+        text-align: left;
+        &::before{
+            content:'';
+            width: 1px;
+            height: rem(40);
+            background: $tableBorder;
+            position: absolute;
+            top:50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+
+
+
+.listTop{
+    //padding: 0 rem(10);
+    &.flex{
+        @include sideArray;
+    }
+    label{            
+        margin-right: rem(16);
+    }
+    // button{
+    //     float: right;
+    //     margin-top: -5px;
+    // }
+}
+
+.listBottom{
+    width: 100%;
+    padding: rem(30) rem(40);
+    //box-shadow: -5px -5px 10px rgba(0,0,0,0.1);
+    //position: absolute;
+    //bottom: 0;
+    @include flex_1_2;
+    //220829
+    font-size: rem(14);
+    //220829
+    .suffix{
+        margin-left: rem(10);
+    }
+    &.pagingType{
+        justify-content: center;
+    }
+    button{
+        font-size: rem(16);
+    }
+}

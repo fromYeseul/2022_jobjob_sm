@@ -1,0 +1,80 @@
+.projRegister{
+    width: 100%;
+    //220829
+    // padding: rem(30) rem(40);
+    padding: rem(20) rem(30);
+    //220829
+    position: relative;
+    // overflow-y: auto;
+    // height: calc(100vh - 80px);
+    .regiPartWrapper{
+        @include scroll_0;
+        //220829
+        // height: calc(100vh - 220px);
+        height: calc(100vh - 200px);
+        //220829
+    }
+    .regiPart{
+        //220829
+        // padding-top: rem(70);
+        padding-top: rem(50);
+        //220829
+        .boxWrap{
+            margin-top: rem(20);
+            padding: rem(40);
+            .inputList{
+                width: 60%;
+                &.row{
+                    width: 75%;
+                }
+                span{
+                    font-weight: 500;
+                }
+                label{
+                    label{
+                        float: right;
+                        margin-right: 0;
+                    }
+                }
+                .full{
+                    input{
+                        //220829
+                        // width: rem(746);
+                        width: rem(783);
+                        //220829
+                    }
+                }
+                &.wide{
+                    width: rem(1340);
+                }
+            }
+            h3{
+                margin-top: rem(40);
+                &.need{
+                    margin-bottom: rem(40);
+                }
+                + ul,
+                + textarea,
+                + table{
+                    margin-top: rem(6);
+                }
+            }
+            .btnType{
+                display: inline-block;
+            }
+            .inputGroup{
+                width: rem(440);
+                height: rem(50);
+                &.wide{
+                    width: rem(600);
+                    height: auto;
+                    font-size: rem(14);
+                    label{
+                        line-height: rem(20);
+                        margin-left: rem(10);
+                    }
+                }
+            }
+        }
+    }
+}

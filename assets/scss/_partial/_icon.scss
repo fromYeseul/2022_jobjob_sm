@@ -1,0 +1,202 @@
+
+.ico{
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(../img/icoGroup.png);
+    //공통
+    &.search{
+        width: rem(18);
+        height: rem(18);
+        background-position: -80px 0px;
+    }
+    &.showPw{
+        width: rem(18);
+        height: rem(18);
+        background-position: -80px 0px;
+    }    
+    &.download{        
+        width: rem(18);
+        height: rem(22);
+        background-position: -40px 0;
+    }
+    &.filter{
+        width: rem(17);
+        height: rem(17);
+        background-position: -60px 0;
+    }
+    &.fileUpload{
+        width: rem(22);
+        height: rem(24);
+        background-position: -200px 0;
+    }
+    &.delete{
+        width: rem(14);
+        height: rem(14);
+        width: 14px;
+        height: 14px;    
+        vertical-align: inherit;
+        background-position: -160px 0;
+    }
+    &.smClose{
+        width: rem(14);
+        height: rem(14);    
+        vertical-align: inherit;
+        background-position: -160px 0;
+        &.w{
+            background-position: -180px 0;
+        }
+    }
+    &.layerClose{
+        width: rem(18);
+        height: rem(18);
+        background-position: -100px 0;
+    }
+    &.refresh{
+        width: rem(21);
+        height: rem(18);
+        background-position: -120px 0;
+    }
+    &.more{
+        width: rem(3); 
+        height: rem(17);
+        background-position: -142px 0;
+    }
+    &.setting{
+        width: rem(20);
+        height: rem(20);
+        vertical-align: sub;
+        background-position: -280px 0;
+    }
+    &.plus{
+        width: rem(18);
+        height: rem(18);
+        background-position: -20px -180px;
+    }
+    &.minus{
+        width: rem(18);
+        height: rem(2);
+        background-position: 0 -180px;
+    }
+    &.sort{
+        width: rem(18);
+        height: rem(3);
+        background-position: -240px 0;
+    }
+    &.change{
+        width: rem(20);
+        height: rem(20);
+        background-position: -260px 0;
+    }
+    &.top{
+        width: rem(40);
+        height: rem(40);
+        background-position: -40px -20px;
+    }
+    //페이징
+    &.left{
+        width: rem(12);
+        height: rem(20);
+        background-position: 0 -60px;
+        &.is-active{
+            background-position: -20px -60px;
+        }
+    }
+    &.right{
+        width: rem(12);
+        height: rem(20);
+        background-position: 0 -80px;
+        &.is-active{
+            background-position: -20px -80px;
+        }
+    }
+    &.left2{
+        width: rem(10);
+        height: rem(17);
+        background-position: 0 -100px;
+        &.is-active{
+            background-position: -20px -100px;
+        }
+    }
+    &.right2{
+        width: rem(10);
+        height: rem(17);
+        background-position: 0 -120px;
+        &.is-active{
+            background-position: -20px -120px;
+        }
+    }
+    &.left2_dou{        
+        width: rem(13);
+        height: rem(17);
+        background-position: 0 -140px;
+        &.is-active{
+            background-position: -20px -140px;
+        }
+    }
+    &.right2_dou{        
+        width: rem(13);
+        height: rem(17);
+        background-position: 0 -160px;
+        &.is-active{
+            background-position: -20px -160px;
+        }
+    }
+}
+/* HEADER 아이콘 */
+.header{
+    .ico{
+        width: rem(24);
+        height: rem(24);
+        background-image: url(../img/icoGnb.png);
+        &.info{        
+            background-position: 0px 0px;
+        } 
+        &.setting{        
+            background-position: 30px 30px;
+        }
+    }
+}
+
+/* GNB 아이콘 */
+.gnb{
+    .ico{        
+        width: rem(22);
+        height: rem(22);
+        background-image: url(../img/icoGnb.png);
+        &.ctrlBtn{
+            background-position: 0px 0px;
+        }
+        &.home{
+            background-position: -30px 0;
+        }
+        &.member{
+            background-position: -30px -30px;
+        }
+        &.project{
+            background-position: -30px -60px;
+        }
+        &.homepage{
+            background-position: -30px 0;
+        }
+        &.event{
+            background-position: -30px 0;
+        }
+        &.ask{
+            background-position: -30px 0;
+        }
+        &.stats{
+            background-position: -30px 0;
+        }
+        &.admin{
+            width: rem(28);
+            height: rem(28);
+            background-position: -30px -90px;
+        }
+        &.system{
+            background-position: -30px 0;
+        }
+        &.commonCode{
+            background-position: -30px -120px;
+        }
+    }
+}

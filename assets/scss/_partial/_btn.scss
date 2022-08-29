@@ -1,0 +1,220 @@
+.btnWrap{
+    &.center{
+        text-align: center;
+    }
+    &.right{
+        text-align: right;
+    }
+}
+
+
+button, 
+.button{
+    display: inline-block;
+    color: $white;
+    font-weight: 700;
+    text-align: center;
+    border-radius: rem(6);
+    background-color: $mainColor;
+    cursor: pointer;
+    //disable
+    &:disabled,
+    &.disabled{
+        cursor:not-allowed;
+        color: $cancel;
+        background-color: $white;
+        border: 1px solid $inputGray;
+    }
+    //버튼간격
+    & + button,
+    & + .button{
+        margin-left: rem(4);
+    }
+    //사이즈
+    &.fullSize{
+        width: 100%;
+        //220829
+        // line-height: rem(54);
+        line-height: rem(46);
+        //220829
+    }
+    &.lowSize{
+        width: rem(130);
+        line-height: rem(38);
+    }
+    &.smSize{
+        //width: rem(74);
+        line-height: rem(30);
+        padding: 0 rem(12);
+        font-weight: 400;
+    }
+    &.midSize{
+        min-width: rem(90);
+        line-height: rem(50);
+        padding: 0 rem(15);
+        &.low{
+            //220829
+            // line-height: rem(40);
+            line-height: rem(36);
+            //220829
+        }
+    }
+    &.laSize{
+        //220829
+        // min-width: rem(130);
+        // line-height: rem(55);
+        min-width: rem(120);
+        line-height: rem(48);
+        //220829
+        padding: 0 rem(20);
+        font-size: rem(18);
+    }
+    &.xlSize{
+        width: rem(160);
+        line-height: rem(54);
+        font-size: rem(18);
+    }
+    //디자인
+    &.ico{
+        background-color: inherit;
+    }
+    &.white{
+        //width: rem(98);
+        line-height: rem(34);
+        padding: 0 rem(15);
+        color: $black;
+        background-color: $white;
+        border: 1px solid $inputGray;
+        &.lowSize{
+            //220829
+            // width: rem(130);
+            // line-height: rem(38);
+            width: rem(100);
+            line-height: rem(34);
+            //220829
+        }
+        &.smSize{
+            //width: rem(74);
+            padding: 0 rem(12);
+            line-height: rem(30);
+            //border: 1px solid $gray;
+        }
+        &.laSize{
+            line-height: rem(55);
+        }
+        &.xlSize{
+            width: rem(160);
+            line-height: rem(54);
+            font-size: rem(18);
+            font-weight: 700;
+        }
+        &:disabled,
+        &.disabled{
+            color: $cancel;
+            cursor:not-allowed;
+        }
+    }
+    &.warning{
+        background: $error;
+    }
+    &.round{
+        // width: rem(64);
+        // height: rem(32);
+        min-width: rem(64);
+        padding: 0 rem(7);
+        line-height: rem(30);
+        color: $black;
+        font-weight: 400;
+        background: $white;
+        //border: 1px solid $gray;
+        border: 1px solid $btnGray;
+        border-radius: rem(20);        
+        &.disabled{
+            color: $layoutColor;
+            border: 1px solid $layoutColor;
+        }
+    }
+    &.onlyIco{
+        width: rem(40);
+        height: rem(40);
+        background-color: $white;
+        border: 1px solid $inputGray;
+        @include heightArray;
+    }
+    //마이피플 더보기 삭제
+    &.square{
+        display: none;
+        //220829
+        // min-width: rem(84);
+        min-width: rem(72);
+        //220829
+        padding: rem(3) 0;
+        color: $black;
+        font-weight: 400;
+        background: $white;
+        border-radius: 0;
+        border:1px solid $selGray;
+        &.is-active{
+            display: block;
+        }
+    }
+    //상태
+    &.order{
+        color: $highlight;
+        border-color: $highlight;
+    }
+    &.cancel{
+        color: $cancel;
+        border-color: $cancel;
+    }
+    &.checking{
+        color: $onGoing;
+        border-color: $onGoing;
+    }
+    &.short{
+        color: $delay;
+        border-color: $delay;
+    }
+    &.reject{
+        color: $delay;
+        border-color: $delay;
+    }
+    //라벨
+    &.label{
+        min-width: rem(44);
+        line-height: rem(22);
+        color: $systemGray;
+        //220829
+        // font-size: rem(14);
+        font-size: rem(12);
+        //220829
+        font-weight: 400;
+        background: $bgColor;
+        border-radius: rem(20);
+        border-color: $tableBgGray;
+        cursor: inherit;
+    }
+    &.point{
+        display: inline-block;
+        //220829
+        // width: rem(44);
+        // line-height: rem(24);
+        // font-size: rem(14);
+        width: rem(40);
+        line-height: rem(22);
+        font-size: rem(12);
+        //220829
+        color: $white;
+        text-align: center;
+        background: $delay;
+        border-radius: rem(5);
+        margin-right: rem(4);
+    }
+}
+
+
+span{
+    &.button{
+        cursor:inherit;
+    }
+}

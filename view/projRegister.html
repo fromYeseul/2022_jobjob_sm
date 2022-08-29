@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로젝트 등록</title>
+    
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body class="hasFooter">
+
+    <section class="layoutWrapper">
+        <header>
+            <div class="prefix">
+                <a href="#" class="logo">
+                    <img src="../assets/img/icoLogo.png" alt="">
+                </a>
+            </div>
+            <div class="center">
+                <a href="#" class="is-active">My Project</a>
+                <a href="#">My People</a>
+            </div>
+            <div class="suffix">
+                <ul>
+                    <li class="userTeam">
+                        <a href="#">시스템통합사업본부 홍길동</a>
+                    </li>
+                    <li>
+                        <a href="#">내정보 수정</a>
+                        <a href="#" class="logState">로그아웃</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+
+        <section class="gnbWrapper">
+            <div class="gnb">
+                <div class="navCtrlBtn">
+                    <i class="ico ctrlBtn"></i>
+                </div>
+                <nav class="navWrapper">
+                    <ul>
+                        <li class="is-active"><a href="#"><i class="ico home"></i><span class="menuTxt">홈</span><i></i></a></li>
+                        <li><a href="#"><i class="ico member"></i><span class="menuTxt">회원</span><i></i></a></li>
+                        <li><a href="#"><i class="ico project"></i><span class="menuTxt">프로젝트</span><i></i></a></li>
+                        <li><a href="#"><i class="ico homepage"></i><span class="menuTxt">홈페이지</span><i></i></a></li>
+                        <li><a href="#"><i class="ico event"></i><span class="menuTxt">이벤트/배너</span><i></i></a></li>
+                        <li><a href="#"><i class="ico ask"></i><span class="menuTxt">고객문의</span><i></i></a></li>
+                        <li><a href="#"><i class="ico stats"></i><span class="menuTxt">통계</span><i></i></a></li>
+                        <li><a href="#"><i class="ico admin"></i><span class="menuTxt">운영자관리</span><i></i></a></li>
+                        <li><a href="#"><i class="ico system"></i><span class="menuTxt">시스템관리</span><i></i></a></li>
+                        <li><a href="#"><i class="ico commonCode"></i><span class="menuTxt">공통코드</span><i></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>   
+        
+        <section class="contWrapper noRight"><!--우측패널 없는 페이지-->
+            <section class="contLayout">
+                
+                <section class="projRegister">
+
+                    <div class="pageTit">
+                        <h2 id="test">프로젝트 요청등록</h2>
+                        <div class="breadCrumb">
+                            <ul class="flex">
+                                <li class="is-active" id="clickOne"><a href="#">기본정보</a></li>
+                                <li id="clickTwo"><a href="#">모집인원</a></li>
+                                <li id="clickThree"><a href="#">근무환경</a></li>
+                                <li id="clickFour"><a href="#">추가정보</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="regiPartWrapper">                        
+                        <div class="regiPart">
+                            <h5>1. 프로젝트 기본정보</h5>
+                            <div class="boxWrap">
+                                <div class="inputList column half">   
+                                    <ul>
+                                        <li class="full">
+                                            <label class="need" for="project">프로젝트 이름
+                                                <input type="checkbox" id="secretPay" name="secretPay" class="hasTxt">
+                                                <label for="secretPay">대외비로 진행</label>
+                                            </label>
+                                            <input class="need" type="text" id="project" maxlength="50" placeholder="프로젝트 이름"> 
+                                                
+                                            <div class="btnType">                                            
+                                                <input type="radio" id="b1" name="aa" class="hasTxt btnType">
+                                                <label for="b1">신규구축(SI)</label>
+                                                <input type="radio" id="b2" name="aa" class="hasTxt btnType" checked="">
+                                                <label for="b2">운영(SM)</label>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <label class="need" for="">요청회사</label>
+                                            <input class="full" type="text" id="" maxlength="20"> 
+                                        </li>
+                                        <li>
+                                            <label class="need" for="">요청자 이름</label>
+                                            <input class="full" type="text" id=""> 
+                                        </li>
+                                        <li>
+                                            <label class="need" for="">요청자 이메일</label>
+                                            <input class="full" type="text" id="" maxlength="35"> 
+                                        </li>
+                                        <li>
+                                            <label class="need" for="">연락처</label>
+                                            <input class="full" type="text" id="" maxlength="11" placeholder="- 를 제외한 숫자만 입력하세요."> 
+                                        </li>
+                                        <li>
+                                            <label class="need" for="">프로젝트 시작희망일</label>
+                                            <input class="full mr0" type="date" id="" maxlength="" placeholder="프로젝트 이름을 입력하세요."  onkeydown="return false"> 
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>  
+                        <div class="regiPart">
+                            <h5>2. 모집인원</h5>
+                            <div class="h5_sub">
+                                모집하는 인력의 업무 포지션과 경력, 인건비를 입력해주세요.<br>그리고 각 직무에 해당하는 업무 내용과 주요 필수 요건이 있다면 입력해 주세요.
+                            </div>
+                            <!--220826 추가 -ys-->
+                            <button class="midSize">계약 및 투입 상세정보</button>
+                            <!--//220826 추가 -ys-->
+                            <div class="boxWrap">
+                                <div class="inputList column row">   
+                                    <ul>
+                                        <li>
+                                            <label class="need" for="">직군</label>
+                                            <div class="select">
+                                                <span class="selDefault">선택</span>
+                                                <ul class="optionList">
+                                                    <li class="optionItem">PM</li>
+                                                    <li class="optionItem">개발</li>
+                                                    <li class="optionItem">기획</li>
+                                                    <li class="optionItem">디자인</li>
+                                                    <li class="optionItem">퍼블리싱</li>
+                                                    <li class="optionItem">서비스데스크</li>
+                                                    <li class="optionItem">OP</li>
+                                                    <li class="optionItem">QA</li>
+                                                    <li class="optionItem">네트워크/서버</li>
+                                                    <li class="optionItem">SAP컨설팅</li>
+                                                    <li class="optionItem">ABAP</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <label class="need" for="project">직무</label>
+                                            <div class="select wideSize">
+                                                <span class="selDefault">선택</span>
+                                                <ul class="optionList">
+                                                    <li class="optionItem">열람</li>
+                                                    <li class="optionItem">추천검토</li>
+                                                    <li class="optionItem">인터뷰</li>
+                                                    <li class="optionItem">최종합격</li>
+                                                    <li class="optionItem">불합격</li>
+                                                    <li class="optionItem">투입확정</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <label class="need" for="">등급</label>
+                                            <div class="select">
+                                                <span class="selDefault">선택</span>
+                                                <ul class="optionList">
+                                                    <li class="optionItem">초급</li>
+                                                    <li class="optionItem">중급</li>
+                                                    <li class="optionItem">고급</li>
+                                                    <li class="optionItem">특급</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <label class="need" for="">모집인원</label>
+                                            <input class="smSize" type="text" id="" maxlength="" placeholder="00"> 
+                                            <span>명</span>
+                                        </li>
+                                        <li>
+                                            <label class="need" for="">단가</label>
+                                            <input class="" type="text" id="" maxlength="" placeholder=""> 
+                                            <span>만원</span>
+                                        </li>
+                                    </ul>
+                                    <ul class="row">
+                                        <li>
+                                            <textarea class="wideSize" name="" id="" rows=""></textarea>
+                                        </li>
+                                        <li class="flexBetween">
+                                            <button class="onlyIco">
+                                                <i class="ico refresh"></i>
+                                            </button>
+                                            <div class="flexEnd">
+                                                <button class="onlyIco">
+                                                    <i class="ico minus"></i>
+                                                </button>
+                                                <button class="onlyIco">
+                                                    <i class="ico plus"></i>
+                                                </button>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <label class="need" for="">투입(예정)일</label>
+                                            <input class="" type="date" id="" maxlength="">
+                                        </li>
+                                        <li>
+                                            <label class="need" for="">종료(예정)일</label>
+                                            <input class="" type="date" id="" maxlength="">
+                                        </li>
+                                    </ul>
+                                    <ul>
+                                        <li>
+                                            <label class="need" for="">요구스킬</label>
+                                            <div class="inputGroup">
+                                                <div class="inputObj">
+                                                    <span>JSP</span>
+                                                    <button class="ico smClose w"></button>
+                                                </div>
+                                                <div class="inputObj is-active">
+                                                    <input type="text" placeholder="예) Java, JSP 등">
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- <div class="inputList wide">
+                                    <h3>매출</h3>
+                                    <table class="hasInput">
+                                        <colgroup>
+                                            <col width="56px;">
+                                            <col>
+                                            <col>
+                                            <col width="15%;">
+                                            <col>
+            
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                            <col>
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>
+                                                    <input type="checkbox" id="chkAll" name="chkAll">
+                                                    <label for="chkAll"></label>
+                                                </th>
+                                                <th>등급</th>
+                                                <th>직군</th>
+                                                <th>직무</th>
+                                                <th>투입</th>
+                                                <th>종료</th>
+                                                <th>M/M</th>
+                                                <th>매출단가</th>
+                                                <th>총 매출</th>
+                                                <th>병합</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" id="chk_1" name="chkEach">
+                                                    <label for="chk_1"></label>
+                                                </td>
+                                                <td>
+                                                    <div class="select lowSize">
+                                                        <span class="selDefault">선택</span>
+                                                        <ul class="optionList">
+                                                            <li class="optionItem">초급</li>
+                                                            <li class="optionItem">중급</li>
+                                                            <li class="optionItem">고급</li>
+                                                            <li class="optionItem">특급</li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="select lowSize">
+                                                        <span class="selDefault">선택</span>
+                                                        <ul class="optionList">
+                                                            <li class="optionItem">PM</li>
+                                                            <li class="optionItem">개발</li>
+                                                            <li class="optionItem">기획</li>
+                                                            <li class="optionItem">디자인</li>
+                                                            <li class="optionItem">퍼블리싱</li>
+                                                            <li class="optionItem">서비스데스크</li>
+                                                            <li class="optionItem">OP</li>
+                                                            <li class="optionItem">QA</li>
+                                                            <li class="optionItem">네트워크/서버</li>
+                                                            <li class="optionItem">SAP컨설팅</li>
+                                                            <li class="optionItem">ABAP</li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="select lowSize wideSize">
+                                                        <span class="selDefault">선택</span>
+                                                        <ul class="optionList">
+                                                            <li class="optionItem">열람</li>
+                                                            <li class="optionItem">추천검토</li>
+                                                            <li class="optionItem">인터뷰</li>
+                                                            <li class="optionItem">최종합격</li>
+                                                            <li class="optionItem">불합격</li>
+                                                            <li class="optionItem">투입확정</li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td>22.09.01</td>
+                                                <td>22.12.31</td>
+                                                <td>3</td>
+                                                <td class="right">2300,000,000</td>
+                                                <td class="right">105,000,000</td>
+                                                <td>-</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" id="chk_1" name="chkEach">
+                                                    <label for="chk_1"></label>
+                                                </td>
+                                                <td>
+                                                    <div class="select lowSize">
+                                                        <span class="selDefault">선택</span>
+                                                        <ul class="optionList">
+                                                            <li class="optionItem">초급</li>
+                                                            <li class="optionItem">중급</li>
+                                                            <li class="optionItem">고급</li>
+                                                            <li class="optionItem">특급</li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="select lowSize">
+                                                        <span class="selDefault">선택</span>
+                                                        <ul class="optionList">
+                                                            <li class="optionItem">PM</li>
+                                                            <li class="optionItem">개발</li>
+                                                            <li class="optionItem">기획</li>
+                                                            <li class="optionItem">디자인</li>
+                                                            <li class="optionItem">퍼블리싱</li>
+                                                            <li class="optionItem">서비스데스크</li>
+                                                            <li class="optionItem">OP</li>
+                                                            <li class="optionItem">QA</li>
+                                                            <li class="optionItem">네트워크/서버</li>
+                                                            <li class="optionItem">SAP컨설팅</li>
+                                                            <li class="optionItem">ABAP</li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="select lowSize wideSize">
+                                                        <span class="selDefault">선택</span>
+                                                        <ul class="optionList">
+                                                            <li class="optionItem">열람</li>
+                                                            <li class="optionItem">추천검토</li>
+                                                            <li class="optionItem">인터뷰</li>
+                                                            <li class="optionItem">최종합격</li>
+                                                            <li class="optionItem">불합격</li>
+                                                            <li class="optionItem">투입확정</li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td>22.09.01</td>
+                                                <td>22.12.31</td>
+                                                <td>3</td>
+                                                <td class="right">1160,000,000</td>
+                                                <td class="right">100,0320,000</td>
+                                                <td>-</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" id="chk_1" name="chkEach">
+                                                    <label for="chk_1"></label>
+                                                </td>
+                                                <td>
+                                                    <div class="select lowSize">
+                                                        <span class="selDefault">선택</span>
+                                                        <ul class="optionList">
+                                                            <li class="optionItem">초급</li>
+                                                            <li class="optionItem">중급</li>
+                                                            <li class="optionItem">고급</li>
+                                                            <li class="optionItem">특급</li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="select lowSize">
+                                                        <span class="selDefault">선택</span>
+                                                        <ul class="optionList">
+                                                            <li class="optionItem">PM</li>
+                                                            <li class="optionItem">개발</li>
+                                                            <li class="optionItem">기획</li>
+                                                            <li class="optionItem">디자인</li>
+                                                            <li class="optionItem">퍼블리싱</li>
+                                                            <li class="optionItem">서비스데스크</li>
+                                                            <li class="optionItem">OP</li>
+                                                            <li class="optionItem">QA</li>
+                                                            <li class="optionItem">네트워크/서버</li>
+                                                            <li class="optionItem">SAP컨설팅</li>
+                                                            <li class="optionItem">ABAP</li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="select lowSize wideSize">
+                                                        <span class="selDefault">선택</span>
+                                                        <ul class="optionList">
+                                                            <li class="optionItem">열람</li>
+                                                            <li class="optionItem">추천검토</li>
+                                                            <li class="optionItem">인터뷰</li>
+                                                            <li class="optionItem">최종합격</li>
+                                                            <li class="optionItem">불합격</li>
+                                                            <li class="optionItem">투입확정</li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td>22.09.01</td>
+                                                <td>22.12.31</td>
+                                                <td>3</td>
+                                                <td class="right">1990,000,000</td>
+                                                <td class="right">100,0070,000</td>
+                                                <td>-</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" id="chk_1" name="chkEach">
+                                                    <label for="chk_1"></label>
+                                                </td>
+                                                <td>
+                                                    <div class="select lowSize">
+                                                        <span class="selDefault">선택</span>
+                                                        <ul class="optionList">
+                                                            <li class="optionItem">초급</li>
+                                                            <li class="optionItem">중급</li>
+                                                            <li class="optionItem">고급</li>
+                                                            <li class="optionItem">특급</li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="select lowSize">
+                                                        <span class="selDefault">선택</span>
+                                                        <ul class="optionList">
+                                                            <li class="optionItem">PM</li>
+                                                            <li class="optionItem">개발</li>
+                                                            <li class="optionItem">기획</li>
+                                                            <li class="optionItem">디자인</li>
+                                                            <li class="optionItem">퍼블리싱</li>
+                                                            <li class="optionItem">서비스데스크</li>
+                                                            <li class="optionItem">OP</li>
+                                                            <li class="optionItem">QA</li>
+                                                            <li class="optionItem">네트워크/서버</li>
+                                                            <li class="optionItem">SAP컨설팅</li>
+                                                            <li class="optionItem">ABAP</li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="select lowSize wideSize">
+                                                        <span class="selDefault">선택</span>
+                                                        <ul class="optionList">
+                                                            <li class="optionItem">열람</li>
+                                                            <li class="optionItem">추천검토</li>
+                                                            <li class="optionItem">인터뷰</li>
+                                                            <li class="optionItem">최종합격</li>
+                                                            <li class="optionItem">불합격</li>
+                                                            <li class="optionItem">투입확정</li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td>22.09.01</td>
+                                                <td>22.12.31</td>
+                                                <td>3</td>
+                                                <td class="right">100,006,000</td>
+                                                <td class="right">400,000,000</td>
+                                                <td>-</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" id="chk_1" name="chkEach">
+                                                    <label for="chk_1"></label>
+                                                </td>
+                                                <td>
+                                                    <div class="select lowSize">
+                                                        <span class="selDefault">선택</span>
+                                                        <ul class="optionList">
+                                                            <li class="optionItem">초급</li>
+                                                            <li class="optionItem">중급</li>
+                                                            <li class="optionItem">고급</li>
+                                                            <li class="optionItem">특급</li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="select lowSize">
+                                                        <span class="selDefault">선택</span>
+                                                        <ul class="optionList">
+                                                            <li class="optionItem">PM</li>
+                                                            <li class="optionItem">개발</li>
+                                                            <li class="optionItem">기획</li>
+                                                            <li class="optionItem">디자인</li>
+                                                            <li class="optionItem">퍼블리싱</li>
+                                                            <li class="optionItem">서비스데스크</li>
+                                                            <li class="optionItem">OP</li>
+                                                            <li class="optionItem">QA</li>
+                                                            <li class="optionItem">네트워크/서버</li>
+                                                            <li class="optionItem">SAP컨설팅</li>
+                                                            <li class="optionItem">ABAP</li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div class="select lowSize wideSize">
+                                                        <span class="selDefault">선택</span>
+                                                        <ul class="optionList">
+                                                            <li class="optionItem">열람</li>
+                                                            <li class="optionItem">추천검토</li>
+                                                            <li class="optionItem">인터뷰</li>
+                                                            <li class="optionItem">최종합격</li>
+                                                            <li class="optionItem">불합격</li>
+                                                            <li class="optionItem">투입확정</li>
+                                                        </ul>
+                                                    </div>
+                                                </td>
+                                                <td>22.09.01</td>
+                                                <td>22.12.31</td>
+                                                <td>3</td>
+                                                <td class="right">800,000,000</td>
+                                                <td class="right">1200,000,000</td>
+                                                <td>-</td>
+                                            </tr>
+                                        </tbody>
+                                        <tfoot>
+                                            <tr>
+                                                <td colspan="6">합계</td>
+                                                <td>3</td>
+                                                <td class="right">100,000,000</td>
+                                                <td class="right">100,000,000</td>
+                                                <td></td>
+                                            </tr>
+                                        </tfoot>
+                                    </table>
+                                </div> -->
+                            </div>
+                        </div>      
+                        <div class="regiPart">
+                            <h5>3. 근무환경</h5>
+                            <div class="boxWrap">
+                                <div class="inputList column row">   
+                                    <ul>
+                                        <li>
+                                            <label class="need" for="">근무방식</label>
+                                            <div class="select">
+                                                <span class="selDefault">선택</span>
+                                                <ul class="optionList">
+                                                    <li class="optionItem">상주</li>
+                                                    <li class="optionItem">비상주</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <label class="need" for="project">시/도</label>
+                                            <div class="select wideSize">
+                                                <span class="selDefault">전체</span>
+                                                <ul class="optionList">
+                                                    <li class="optionItem">열람</li>
+                                                    <li class="optionItem">추천검토</li>
+                                                    <li class="optionItem">인터뷰</li>
+                                                    <li class="optionItem">최종합격</li>
+                                                    <li class="optionItem">불합격</li>
+                                                    <li class="optionItem">투입확정</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <label class="need" for="">군/구</label>
+                                            <div class="select">
+                                                <span class="selDefault">전체</span>
+                                                <ul class="optionList">
+                                                    <li class="optionItem">열람</li>
+                                                    <li class="optionItem">추천검토</li>
+                                                    <li class="optionItem">인터뷰</li>
+                                                    <li class="optionItem">최종합격</li>
+                                                    <li class="optionItem">불합격</li>
+                                                    <li class="optionItem">투입확정</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <label for="">상세주소                                            
+                                                <input type="checkbox" id="closed" name="closed" class="hasTxt">
+                                                <label for="closed">주소 비공개</label>
+                                            </label>
+
+                                            <input class="laSize" type="text" id="" maxlength="" placeholder="00"> 
+                                        </li>
+                                    </ul>
+                                    <h3 class="need">근무 시간을 선택해 주세요</h3>
+                                    <ul class="gap20">
+                                        <li>
+                                            <div class="select">
+                                                <span class="selDefault">09시</span>
+                                                <ul class="optionList">
+                                                    <li class="optionItem">열람</li>
+                                                    <li class="optionItem">추천검토</li>
+                                                    <li class="optionItem">인터뷰</li>
+                                                    <li class="optionItem">최종합격</li>
+                                                    <li class="optionItem">불합격</li>
+                                                    <li class="optionItem">투입확정</li>
+                                                </ul>
+                                            </div>
+                                            <div class="select">
+                                                <span class="selDefault">00분</span>
+                                                <ul class="optionList">
+                                                    <li class="optionItem">열람</li>
+                                                    <li class="optionItem">추천검토</li>
+                                                    <li class="optionItem">인터뷰</li>
+                                                    <li class="optionItem">최종합격</li>
+                                                    <li class="optionItem">불합격</li>
+                                                    <li class="optionItem">투입확정</li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="lh50">~</li>
+                                        <li>
+                                            <div class="select">
+                                                <span class="selDefault">18시</span>
+                                                <ul class="optionList">
+                                                    <li class="optionItem">열람</li>
+                                                    <li class="optionItem">추천검토</li>
+                                                    <li class="optionItem">인터뷰</li>
+                                                    <li class="optionItem">최종합격</li>
+                                                    <li class="optionItem">불합격</li>
+                                                    <li class="optionItem">투입확정</li>
+                                                </ul>
+                                            </div>
+                                            <div class="select">
+                                                <span class="selDefault">00분</span>
+                                                <ul class="optionList">
+                                                    <li class="optionItem">열람</li>
+                                                    <li class="optionItem">추천검토</li>
+                                                    <li class="optionItem">인터뷰</li>
+                                                    <li class="optionItem">최종합격</li>
+                                                    <li class="optionItem">불합격</li>
+                                                    <li class="optionItem">투입확정</li>
+                                                </ul>
+                                            </div>  
+                                        </li>
+                                        <li>                                                                         
+                                            <input type="checkbox" id="pay" name="pay" class="hasTxt">
+                                            <label for="pay" class="lh50">협의</label>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>        
+                        <div class="regiPart">
+                            <h5>4. 추가정보</h5>
+                            <div class="boxWrap">
+                                <div class="inputList">   
+                                    <div class="h5_sub">
+                                        프로젝트와 관련된 자료를 첨부해 주세요.<br>첨부하신 자료는 외부로 공유되지 않으며 프로젝트 분석과 인력 매칭을 위해서만 사용됩니다.
+                                    </div>
+                                    <ul>
+                                        <li class="flexEnd">
+                                            <!--220824 수정 -ys -->
+                                            <div class="uploadBox">
+                                                <div class="inputGroup upload wide">
+                                                    <div class="drop">
+                                                        <i class="ico fileUpload"></i>
+                                                        <label for="fileUpload">
+                                                            RFP, 기획서, 스토리보드 등 프로젝트를 파악할 수 있는 자료를<br>
+                                                            여기에 첨부해 주세요. (파일 최대 5개, 100MB이하)
+                                                        </label>
+                                                    </div>
+                                                    <div class="list">
+                                                        <ul class="list_ul"></ul>
+                                                    </div>
+                                                </div>
+                                            
+                                                <label for="cycleDocument" class="">또는 직접선택</label>
+                                                <input type="file" name="cycleDocument" id="cycleDocument" class="" tabindex="" />
+                                            </div>
+                                            <!--//220824 수정 -ys -->
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="inputList column half"> 
+                                    <ul>
+                                        <li>
+                                            <h3>프로젝트 소개</h3>
+                                            <textarea class="xlSize" name="" id="" rows="10"></textarea>
+                                        </li>
+                                        <li>
+                                            <h3>기타 참고사항</h3>
+                                            <textarea class="xlSize" name="" id="" rows="10"></textarea>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="inputList"> 
+                                    <h3>프로젝트를 잡잡 직원과 먼저 의논하셨나요?<br>또는 추천을 받으셨나요?</h3>
+                                    <ul>
+                                        <li>
+                                            <input class="xlSize" type="text" id="" maxlength="" placeholder="직원 이름 입력">
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>     
+
+                    <footer class="toast">
+                        <h5>이 프로젝트의 진행 여부를 판단하세요.</h5>
+                        <div class="suffix">
+                            <button class="xlSize">공고등록</button>
+                            <button class="white xlSize">공고수정</button>
+                            <button class="warning xlSize">진행불가</button>
+                        </div>
+                    </footer>
+
+
+                </section>
+                
+            </section>
+        </section>
+
+    </section>
+
+    <!--플로팅메뉴-->
+    <div class="floatingWrapper">
+        <div class="floating">
+            <h6>이 프로젝트의 상태를</h6>
+            <div class="select lowSize"><!--220829 수정 -ys-->
+                <span class="selDefault">선택</span>
+                <ul class="optionList">
+                    <li class="optionItem">의뢰단계</li>
+                    <li class="optionItem">접수</li>
+                    <li class="optionItem">접수취소<p>(접수 이후 부터 노출)</p></li>
+                    <li class="optionItem">검토중</li>
+                    <li class="optionItem">보안요구</li>
+                    <li class="optionItem">불가</li>
+
+                    <li class="optionItem">진행</li>
+                    <li class="optionItem">무산</li>
+                    <li class="optionItem">종료</li>
+                </ul>
+            </div>
+            <h6>영업담당자</h6>
+            <div class="select lowSize"><!--220829 수정 -ys-->
+                <span class="selDefault">선택</span>
+                <ul class="optionList">
+                    <li class="optionItem">
+                        <input type="checkbox" id="optChk_1" name="aa" class="hasTxt">
+                        <label for="optChk_1">apple</label>
+                    </li>
+                    
+                    <li class="optionItem">
+                        <input type="checkbox" id="optChk_2" name="aa" class="hasTxt">
+                        <label for="optChk_2">banana</label>
+                    </li>
+                    <li class="optionItem">
+                        <input type="checkbox" id="optChk_3" name="aa" class="hasTxt">
+                        <label for="optChk_3">grape</label>
+                    </li>
+                    <li class="optionItem">
+                        <input type="checkbox" id="optChk_4" name="aa" class="hasTxt">
+                        <label for="optChk_4">mango</label>
+                    </li>
+                </ul>
+            </div>
+            <h6>소싱담당자</h6>
+            <div class="select lowSize"><!--220829 수정 -ys-->
+                <span class="selDefault">선택</span>
+                <ul class="optionList">
+                    <li class="optionItem">
+                        <input type="checkbox" id="optChk_1" name="aa" class="hasTxt">
+                        <label for="optChk_1">apple</label>
+                    </li>
+                    
+                    <li class="optionItem">
+                        <input type="checkbox" id="optChk_2" name="aa" class="hasTxt">
+                        <label for="optChk_2">banana</label>
+                    </li>
+                    <li class="optionItem">
+                        <input type="checkbox" id="optChk_3" name="aa" class="hasTxt">
+                        <label for="optChk_3">grape</label>
+                    </li>
+                    <li class="optionItem">
+                        <input type="checkbox" id="optChk_4" name="aa" class="hasTxt">
+                        <label for="optChk_4">mango</label>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="floating">
+            <h6>이 프로젝트를</h6>
+            <button class="white lowSize">삭제</button>
+            <button class="white lowSize">임시저장</button>
+            <button class="midSize">저장</button>
+        </div>
+    </div>
+    <!--//플로팅메뉴-->
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+
+    <script>
+    //스크롤이동 - 프로젝트 등록
+    $(function(){
+
+        var $breadCrumbs = $('.breadCrumb li');
+
+        $breadCrumbs.on('click', function(e){
+            e.preventDefault();
+
+            $breadCrumbs.removeClass('is-active');
+            $(this).addClass('is-active');
+
+            var index = $(this).index();
+
+            if(index == 0){
+                $(".regiPartWrapper").animate({
+                    scrollTop: "0", 
+                },500);
+            }else if(index == 1){
+                $(".regiPartWrapper").animate({
+                    scrollTop: "630", 
+                },500);
+            }else if(index == 2){
+                $(".regiPartWrapper").animate({
+                    scrollTop: "1160", 
+                },500);
+            }else {
+                $(".regiPartWrapper").animate({
+                    scrollTop: "1630", 
+                },500);
+            }            
+        })
+
+        var $Wrapper = $('.regiPartWrapper');
+
+        $Wrapper.scroll(function(){            
+            var $scrollTop = $('.regiPartWrapper').scrollTop();
+
+            console.log($scrollTop);
+
+            if($scrollTop < 630){
+                $breadCrumbs.removeClass('is-active');
+                $breadCrumbs.eq(0).addClass('is-active');
+            }else if($scrollTop < 1160){
+                $breadCrumbs.removeClass('is-active');
+                $breadCrumbs.eq(1).addClass('is-active');
+            }else if($scrollTop < 1630){
+                $breadCrumbs.removeClass('is-active');
+                $breadCrumbs.eq(2).addClass('is-active');
+            }else{
+                $breadCrumbs.removeClass('is-active');
+                $breadCrumbs.eq(3).addClass('is-active');
+            }
+        })
+        
+        
+    })
+
+    
+    //푸터보이기
+    function showFooter(){
+        let regiPartWrapper = document.querySelector('.regiPartWrapper');
+        let regiPart = document.querySelectorAll('.regiPart');
+        let regi3Top = regiPart[3].offsetTop;
+        let toast = document.querySelector('.toast');
+
+        for(let i=0; i<regiPart.length; i++){            
+            regiPartWrapper.addEventListener('scroll', function(e){
+                e.preventDefault();
+
+                if(regiPartWrapper.scrollTop > regi3Top){
+                    toast.classList.add('is-active');
+                }else{
+                    toast.classList.remove('is-active');
+                }
+            })
+        }
+    }showFooter();
+    </script>
+
+    <script>
+        selDefault.onclick = selectBox();
+    </script>
+</body>
+</html>

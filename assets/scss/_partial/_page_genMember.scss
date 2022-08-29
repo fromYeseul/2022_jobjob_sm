@@ -1,0 +1,19 @@
+.genMember{
+    .condition{
+        .chkWrap{
+            display: inline-block;
+            margin-right: rem(50);
+        }
+    }
+    .tableTop{
+        margin-top: rem(30);
+    }
+    .tableBox{
+        //overflow-y:inherit;
+        td{
+            &.nodata{
+                height: rem(220);
+            }
+        }
+    }
+}

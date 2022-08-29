@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>일반회원</title>
+    
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+</head>
+<body>
+
+    <section class="layoutWrapper">
+        <header>
+            <div class="prefix">
+                <a href="#" class="logo">
+                    <img src="../assets/img/icoLogo.png" alt="">
+                </a>
+            </div>            
+            <!-- 220826 삭제 -ys
+                <div class="center">
+                <a href="#" class="is-active">My Project</a>
+                <a href="#">My People</a>
+            </div>
+            //220826 삭제 -ys -->
+            <div class="suffix">
+                <ul>
+                    <li class="userTeam"><a href="#">시스템통합사업본부 홍길동</a></li>
+                    <li>
+                        <a href="#">내정보 수정</a>
+                        <a href="#" class="logState">로그아웃</a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        
+        <section class="gnbWrapper">
+            <div class="gnb">
+                <div class="navCtrlBtn">
+                    <i class="ico ctrlBtn"></i>
+                </div>
+                <nav class="navWrapper">
+                    <ul>
+                        <li class="is-active"><a href="#"><i class="ico home"></i><span class="menuTxt">홈</span><i></i></a></li>
+                        <li><a href="#"><i class="ico member"></i><span class="menuTxt">회원</span><i></i></a></li>
+                        <li><a href="#"><i class="ico project"></i><span class="menuTxt">프로젝트</span><i></i></a></li>
+                        <li><a href="#"><i class="ico homepage"></i><span class="menuTxt">홈페이지</span><i></i></a></li>
+                        <li><a href="#"><i class="ico event"></i><span class="menuTxt">이벤트/배너</span><i></i></a></li>
+                        <li><a href="#"><i class="ico ask"></i><span class="menuTxt">고객문의</span><i></i></a></li>
+                        <li><a href="#"><i class="ico stats"></i><span class="menuTxt">통계</span><i></i></a></li>
+                        <li><a href="#"><i class="ico admin"></i><span class="menuTxt">운영자관리</span><i></i></a></li>
+                        <li><a href="#"><i class="ico system"></i><span class="menuTxt">시스템관리</span><i></i></a></li>
+                        <li><a href="#"><i class="ico commonCode"></i><span class="menuTxt">공통코드</span><i></i></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>   
+        
+        <section class="contWrapper">
+            <section class="contLayout">
+                <section class="genMember">
+                    <h2>일반회원<button class="laSize">+신규등록(2차)</button></h2>
+
+                    <div class="condition">
+                        <ul>
+                            <li>
+                                <p class="condiTit">의뢰목록</p>  
+                                <div class="chkWrap btnType">
+                                    <input type="checkbox" id="reqChkAll" class="chkAll">
+                                    <label for="reqChkAll">전체</label>
+                                    
+                                    <input type="checkbox" id="reqChk_1" class="chkEach" checked>
+                                    <label for="reqChk_1">에코</label>
+                                    
+                                    <input type="checkbox" id="reqChk_2" class="chkEach" >
+                                    <label for="reqChk_2">협력</label>
+                                    
+                                    <input type="checkbox" id="reqChk_3" class="chkEach" >
+                                    <label for="reqChk_3">대행</label>  
+                        
+                                    <input type="checkbox" id="reqChk_4" class="chkEach" >
+                                    <label for="reqChk_4">프리</label>                                         
+                                </div>
+                                
+                                    
+                                <input type="checkbox" id="license01" name="aa" class="hasTxt">
+                                <label for="license01">정보처리기사</label>
+                                <input type="checkbox" id="license02" name="aa" class="hasTxt">
+                                <label for="license02">KOSA</label>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="condition">
+                        <ul>
+                            <li>
+                                <p class="condiTit">직군</p>
+                                <div class="select">
+                                    <span class="selDefault">전체</span>
+                                    <ul class="optionList">
+                                        <li class="optionItem">열람</li>
+                                        <li class="optionItem">추천검토</li>
+                                        <li class="optionItem">인터뷰</li>
+                                        <li class="optionItem">최종합격</li>
+                                        <li class="optionItem">불합격</li>
+                                        <li class="optionItem">투입확정</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <p class="condiTit">등급</p>
+                                <div class="select">
+                                    <span class="selDefault">최종합격</span>
+                                    <ul class="optionList">
+                                        <li class="optionItem">열람</li>
+                                        <li class="optionItem">추천검토</li>
+                                        <li class="optionItem">인터뷰</li>
+                                        <li class="optionItem">최종합격</li>
+                                        <li class="optionItem">불합격</li>
+                                        <li class="optionItem">투입확정</li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <label class="condiTit" for="project2">스킬</label>
+                                <input type="text" id="project2" maxlength="20" placeholder="띄어쓰기로 and 검색 ( 예 : Java asp )">
+                            </li>
+                            <li class="hasBtn">
+                                <label class="condiTit" for="project2">이름, 전화번호</label>
+                                <input type="text" id="project2" maxlength="20" placeholder="이름 또는 전화번호">
+                                <button class="midSize">검색</button>
+                            </li>
+                        </ul>
+                    </div>
+     
+                    <div class="tableTop">                        
+                        <div class="select lowSize">
+                            <span class="selDefault">10개씩</span>
+                            <ul class="optionList">
+                                <li class="optionItem">20개씩</li>
+                                <li class="optionItem">50개씩</li>
+                                <li class="optionItem">100개씩</li>
+                            </ul>
+                        </div>
+
+                        <button class="white">
+                            <i class="ico download"></i>
+                            엑셀저장
+                        </button>                        
+                    </div>
+                    
+                    <div class="tableBox">
+                        <table class="colType">
+                            <colgroup>
+                                <col width="56px;">
+                                <col width="66px;">
+                                <col>
+                                <col>
+                                <col>
+
+                                <col>
+                                <col>
+                                <col width="22%;">
+                                <col>
+                                <col>
+
+                                <col>
+                                <col>
+                                <col>
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>No.</th>
+                                    <th>중요</th>
+                                    <th>소속</th>
+                                    <th>이름</th>
+                                    <th>
+                                        등급
+                                        <input type="checkbox" id="careerChk" name="aa" class="hasTxt">
+                                        <label for="careerChk">경력보기</label>
+                                    </th>
+                                    <th>연락처</th>
+                                    <th>보유기술</th>
+                                    <th>Special</th>
+                                    <th>평가</th>
+                                    <th>정보처리</th>
+                                    <th>KOSA</th>
+                                    <th>가입일</th>
+                                    <th>이력서</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="nodata" colspan="13">검색 결과가 없습니다.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="listBottom pagingType">                        
+                        <div class="paging">
+                            <ul>
+                                <li class="pagingDouble">
+                                    <a href="#">
+                                        <span class="ico left2_dou"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="ico left2"></span>
+                                    </a>
+                                </li>
+                                <li class="is-active">1</li>
+                                <li>2</li>
+                                <li>3</li>
+                                <li>4</li>
+                                <li>5</li>
+                                <li>6</li>
+                                <li>7</li>
+                                <li>8</li>
+                                <li>9</li>
+                                <li>10</li>
+                                <li>
+                                    <a href="#">
+                                        <span class="ico right2 is-active"></span>
+                                    </a>
+                                </li>
+                                <li class="pagingDouble">
+                                    <a href="#">
+                                        <span class="ico right2_dou is-active"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </section>
+                
+        <!--우측패널-->
+        <div class="rPanelLayer">
+            <div class="rPanelBox">
+                <div class="rPanelHeader">
+                    <button class="ico layerClose rClose"></button>
+                </div>
+                <div class="rPanelCont">
+                    <h4>회원검색</h4>
+                    <div class="yScroll">
+                        <div class="hasBtn">  
+                            <a href="#" class="button white midSize filter">
+                                <i class="ico filter"></i>
+                                필터
+                            </a>     
+                            <div class="inputIco">
+                                <input type="text" id="search" class="" maxlength="" placeholder="이름, 스킬, 휴대폰 4자리,  메모 검색 (띄어쓰기로 and 검색)">
+                                <button class="ico search"></button>
+                            </div>
+                        </div>
+                        
+                        <div class="listTop">                                        
+                            <input type="checkbox" id="chkAll" class="hasTxt">
+                            <label for="chkAll"> 0 / 4</label>
+                            
+                            <input type="checkbox" id="chkLevel" class="hasTxt">
+                            <label for="chkLevel" class="mr0"> 등급으로 보기</label>
+
+                            <i class="ico setting"></i>
+                        </div>
+
+                        <div class="boxListWrap">            
+                            <ul>
+                                <!--boxList-->
+                                <li class="boxList headType is-active"> 
+                                    <div class="head">
+                                        <span class="prefix">90.0 Special</span>
+                                        <p class="suffix">
+                                            <input type="checkbox" id="memChk_1" class="bMark" name="bMark" checked="">
+                                            <label for="memChk_1"></label>
+                                        </p>
+                                    </div>  
+                                    <div class="cont">
+                                        <div class="prefix">
+                                            <ul>
+                                                <li class="memName">
+                                                    <img class="photo" src="../assets/img/iconImg.jpg" alt="회원이미지">
+                                                    <span>홍길순(여/29)</span>
+                                                    <span>개발</span>
+                                                    <span>에코</span>
+                                                </li>
+                                                <li class="memSkill">ASP JSP Oracle Oracle Java Java ASP JSP Oracle Oracle Java Java</li>
+                                                <li>
+                                                    <span>서울 강서</span>
+                                                    <span>4년제 졸업</span>
+                                                    <span class="memCareer">22년 4개월</span>
+                                                </li>
+                                                <li class="memMemo">
+                                                    이력서에 <b>보험</b> 없는데 <b>보험</b> 이력이 있다고 함 
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="center">
+                                            <a href="#" class="button round" target="_blank">이력서</a>
+                                        </div>
+                                        <div class="suffix">
+                                            22/12/31부터<br>제안가능      
+                                        </div>
+                                    </div>
+                                </li>
+                                <!--//boxList-->
+                                
+                                <li class="boxList headType">
+                                    <div class="head">
+                                        <span class="prefix">90.0 Special</span>
+                                        <p class="suffix">
+                                            <input type="checkbox" id="memChk_2" class="bMark" name="bMark">
+                                            <label for="memChk_2"></label>
+                                        </p>
+                                    </div>  
+                                    <div class="cont">
+                                        <div class="prefix">
+                                            <ul>
+                                                <li class="memName">
+                                                    <img class="photo" src="../assets/img/iconImg.jpg" alt="회원이미지">
+                                                    <span>홍길순(여/29)</span>
+                                                    <span>개발</span>
+                                                    <span>에코</span>
+                                                </li>
+                                                <li class="memSkill">ASP JSP Oracle Oracle Java Java ASP JSP Oracle Oracle Java Java</li>
+                                                <li>
+                                                    <span>서울 강서</span>
+                                                    <span>4년제 졸업</span>
+                                                    <span class="memCareer">22년 4개월</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="center">
+                                            <a href="#" class="button round disabled" target="_blank">이력서</a>
+                                        </div>
+                                        <div class="suffix">
+                                            수신미동의      
+                                        </div>
+                                    </div>
+                                </li>
+                                
+                                <li class="boxList headType">
+                                    <div class="head">
+                                        <span class="prefix">90.0 Special</span>
+                                        <p class="suffix">
+                                            <input type="checkbox" id="memChk_3" class="bMark" name="bMark">
+                                            <label for="memChk_3"></label>
+                                        </p>
+                                    </div>  
+                                    <div class="cont">
+                                        <div class="prefix">
+                                            <ul>
+                                                <li class="memName">
+                                                    <img class="photo" src="../assets/img/iconImg.jpg" alt="회원이미지">
+                                                    <span>홍길순(여/29)</span>
+                                                    <span>개발</span>
+                                                    <span>에코</span>
+                                                </li>
+                                                <li class="memSkill">ASP JSP Oracle Oracle Java Java ASP JSP Oracle Oracle Java Java</li>
+                                                <li>
+                                                    <span>서울 강서</span>
+                                                    <span>4년제 졸업</span>
+                                                    <span class="memCareer">22년 4개월</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="center">
+                                            <a href="#" class="button round" target="_blank">이력서</a>
+                                        </div>
+                                        <div class="suffix">
+                                            제안불가<br>(부회원) 
+                                        </div>
+                                    </div>
+                                </li>
+                                
+                                <li class="boxList headType">
+                                    <div class="head">
+                                        <span class="prefix">90.0 Special</span>
+                                        <p class="suffix">
+                                            <input type="checkbox" id="memChk_4" class="bMark" name="bMark">
+                                            <label for="memChk_4"></label>
+                                        </p>
+                                    </div>  
+                                    <div class="cont">
+                                        <div class="prefix">
+                                            <ul>
+                                                <li class="memName">
+                                                    <img class="photo" src="../assets/img/iconImg.jpg" alt="회원이미지">
+                                                    <span>홍길순(여/29)</span>
+                                                    <span>개발</span>
+                                                    <span>에코</span>
+                                                </li>
+                                                <li class="memSkill">ASP JSP Oracle Oracle Java Java ASP JSP Oracle Oracle Java Java</li>
+                                                <li>
+                                                    <span>서울 강서</span>
+                                                    <span>4년제 졸업</span>
+                                                    <span class="memCareer">22년 4개월</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="center">
+                                            <a href="#" class="button round disabled" target="_blank">메모(3)</a>
+                                        </div>
+                                        <div class="suffix">
+                                            수신미동의      
+                                        </div>
+                                    </div>
+                                </li>
+                                
+                                <li class="boxList headType">
+                                    <div class="head">
+                                        <span class="prefix">90.0 Special</span>
+                                        <p class="suffix">
+                                            <input type="checkbox" id="jobChk_2" class="bMark" name="bMark">
+                                            <label for="jobChk_2"></label>
+                                        </p>
+                                    </div>  
+                                    <div class="cont">
+                                        <div class="prefix">
+                                            <ul>
+                                                <li class="memName">
+                                                    <img class="photo" src="../assets/img/iconImg.jpg" alt="회원이미지">
+                                                    <span>홍길순(여/29)</span>
+                                                    <span>개발</span>
+                                                    <span>에코</span>
+                                                </li>
+                                                <li class="memSkill">ASP JSP Oracle Oracle Java Java ASP JSP Oracle Oracle Java Java</li>
+                                                <li>
+                                                    <span>서울 강서</span>
+                                                    <span>4년제 졸업</span>
+                                                </li>
+                                                <li class="memCareer">22년 4개월</li>
+                                            </ul>
+                                        </div>
+                                        <div class="center">
+                                            <a href="#" class="button round disabled" target="_blank">메모(3)</a>
+                                        </div>
+                                        <div class="suffix">
+                                            수신미동의      
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="listBottom pagingType">                        
+                        <div class="paging">
+                            <ul>
+                                <li class="pagingDouble">
+                                    <a href="#">
+                                        <span class="ico left2_dou"></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <span class="ico left2"></span>
+                                    </a>
+                                </li>
+                                <li class="is-active">1</li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#">6</a></li>
+                                <li><a href="#">7</a></li>
+                                <li><a href="#">8</a></li>
+                                <li><a href="#">9</a></li>
+                                <li><a href="#">10</a></li>
+                                <li>
+                                    <a href="#">
+                                        <span class="ico right2 is-active"></span>
+                                    </a>
+                                </li>
+                                <li class="pagingDouble">
+                                    <a href="#">
+                                        <span class="ico right2_dou is-active"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="filterWrapper">
+                <div class="filterTop">
+                    <h4>필터</h4>
+                    <a href="#" class="ico refresh"></a>
+                </div>                      
+                
+                <div class="filterList">
+                    <div class="tit">등급</div>  
+
+                    <input type="checkbox" id="lv3" name="level" class="hasTxt">
+                    <label for="lv3">특급</label>                     
+                    <input type="checkbox" id="lv2" name="level" class="hasTxt">
+                    <label for="lv2">고급</label>                     
+                    <input type="checkbox" id="lv1" name="level" class="hasTxt">
+                    <label for="lv1">중급</label>                     
+                    <input type="checkbox" id="lv0" name="level" class="hasTxt">
+                    <label for="lv0">초급</label>
+                </div>       
+
+                <div class="filterList">
+                    <div class="tit">학력</div>  
+
+                    <input type="checkbox" id="eduLv3" name="eduLevel" class="hasTxt">
+                    <label for="eduLv3">대졸이상</label>                     
+                    <input type="checkbox" id="eduLv2" name="eduLevel" class="hasTxt">
+                    <label for="eduLv2">초대졸 이상</label>                     
+                    <input type="checkbox" id="eduLv1" name="eduLevel" class="hasTxt">
+                    <label for="eduLv1">고졸 이상</label>                     
+                    <input type="checkbox" id="eduLv0" name="eduLevel" class="hasTxt">
+                    <label for="eduLv0">전체(default)</label>
+                </div>      
+                
+                <div class="filterList">
+                    <div class="tit">정보처리기사</div>  
+
+                    <input type="checkbox" id="license1" name="license" class="hasTxt">
+                    <label for="license1">있음</label>                     
+                    <input type="checkbox" id="license0" name="license" class="hasTxt">
+                    <label for="license0">없음</label>       
+                </div>  
+                
+                <div class="filterList">
+                    <div class="tit">KOSA</div>  
+
+                    <input type="checkbox" id="kosa1" name="kosa1" class="hasTxt">
+                    <label for="kosa1">있음</label>                     
+                    <input type="checkbox" id="kosa0" name="kosa1" class="hasTxt">
+                    <label for="kosa0">없음</label>       
+                </div>    
+                
+                <div class="filterList">
+                    <div class="tit">평가</div>  
+
+                    <input type="checkbox" id="score3" name="score" class="hasTxt">
+                    <label for="score3">90점 이상</label>                     
+                    <input type="checkbox" id="score2" name="score" class="hasTxt">
+                    <label for="score2">80점 이상</label>  
+                    <input type="checkbox" id="score1" name="score" class="hasTxt">
+                    <label for="score1">70점 이상</label>                     
+                    <input type="checkbox" id="score0" name="score" class="hasTxt">
+                    <label for="score0">전체(default)</label>       
+                </div>             
+            </div>
+        </div>
+        <div class="rPanel">
+            <ul>
+                <li><i class="ico searchMem"></i></li>
+                <li><i class="ico schedule"></i></li>
+                <li><i class="ico mail"></i></li>
+            </ul>
+        </div>
+        <!--우측패널-->
+    </section>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script>
+        selDefault.onclick = selectBox();
+        chkWrap.onclick = chkAll();
+    </script>
+</body>
+</html>

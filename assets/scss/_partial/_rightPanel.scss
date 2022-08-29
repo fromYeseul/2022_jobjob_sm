@@ -1,0 +1,92 @@
+/* GNB 아이콘 */
+.rPanel{
+    i{        
+        //220829
+        width: rem(30);
+        height: rem(30);
+        width: rem(24);
+        height: rem(24);
+        //220829
+        background-image: url(../img/icoGnb.png);
+        &.searchMem{
+            background-position: -120px 0px;
+        }
+        &.schedule{
+            background-position: -120px 0px;
+        }
+        &.mail{
+            background-position: -120px 0px;
+        }
+    }
+}
+
+.rPanelLayer{
+    //220829    
+    font-size: rem(14);
+    //220829    
+    .rPanelBox{
+        padding: rem(30);
+        //height: calc(100vh - 97px);
+        //220829    
+        // height: calc(100vh - 70px);
+        height: calc(100vh - 60px);
+        //220829    
+        border: 1px solid $layoutColor;
+        border-top:0;
+    }   
+    .rPanelCont{  
+        .yScroll{
+            //height: calc(100vh - 317px);
+            height: calc(100vh - 272px);
+            @include scroll_0;
+        }
+        .inputIco{
+            width: calc(100% - 98px);
+            margin-bottom: rem(30);
+        }
+    }
+    .filterWrapper{
+        //220829    
+        // width: rem(230);
+        width: rem(200);
+        //220829    
+        height: 100%;
+        padding: rem(50) rem(30);
+        background: $white;
+        border: 1px solid $layoutColor;
+        box-shadow: -8px 8px 10px 0 rgba(0, 0, 0, 0.2);
+        @include scroll_0;
+        .flex{
+            @include sideArray;
+            align-items: center;
+        }
+        h4{
+            margin-bottom: 0;
+        }
+    }
+}
+
+.rPanelHeader{
+    @include clear_float;
+    .layerClose{
+        float: right;
+    }
+}
+.filterWrapper{
+    .filterTop{
+        @include sideArray;
+    }
+}
+.filterList{
+    margin-top: rem(38);
+    .tit{
+        font-weight: 700;
+    }
+    label{
+        display: block !important;
+        //220829    
+        // margin-top: rem(14);
+        margin-top: rem(10);
+        //220829    
+    }
+}

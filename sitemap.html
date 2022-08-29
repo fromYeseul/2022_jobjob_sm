@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>sitemap</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <style>
+    body,
+    html {
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    a {
+      color: #333333;
+      text-decoration: none;
+    }
+
+    li {
+      list-style: none;
+    }
+
+    .sitemap-menu {
+      position: absolute;
+      display: inline-block;
+      overflow-y: scroll;
+      padding-top: 58px;
+      width: 270px;
+      box-sizing: border-box;
+      height: 100%;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .sitemap-menu::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    .sitemap-menu::-webkit-scrollbar-thumb {
+      background-color: #eee;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .sitemap-menu.mobile {
+      display: none;
+    }
+
+    .viewersize {
+      position: fixed;
+      padding: 10px 0px;
+      background: #3f6b9d;
+      border-radius: 5px;
+      width: 230px;
+      margin: 10px;
+      left: 0;
+      top: 0;
+      color: #fff;
+      z-index: 10;
+      cursor: pointer;
+    }
+
+    .sitemap-menu .tabs-btn {
+      position: sticky;
+      top: 20px;
+      padding: 0 10px 10px;
+      ;
+    }
+
+    .sitemap-menu .tabs-btn li {
+      display: inline-block;
+      margin: 0 5px 5px 0;
+      text-align: center;
+      padding: 5px 10px;
+      background: #aaa;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 13px;
+    }
+
+    .sitemap-menu .tabs-btn li:last-child {
+      margin-right: 0;
+    }
+
+    .sitemap-menu .tabs-btn li.on {
+      background: #328ff6;
+    }
+
+    .sitemap-menu .tabs-btn li a {
+      display: block;
+    }
+
+    .range-wrap {
+      display: none;
+    }
+
+    .range-wrap.on {
+      display: block;
+    }
+
+    .range-wrap .range {
+      margin-bottom: 20px;
+    }
+
+    .range-wrap .range h3 {
+      font-size: 20px;
+      padding: 0 10px;
+      color: #333333;
+    }
+
+    .range-wrap .range h4 {
+      font-size: 15px;
+      padding: 10px 10px 0;
+      color: #6363ab;
+    }
+
+    .range-wrap .range>ul {
+      border-top: 1px solid #ddd;
+      background: #eeffff;
+      margin-bottom: 20px;
+      padding: 0;
+    }
+
+    .range-wrap:nth-of-type(2) .range>ul {
+      background: #fff2f2
+    }
+
+    .range-wrap:nth-of-type(3) .range>ul {
+      background: #f4efff;
+    }
+
+    .range-wrap .range li {
+      border-bottom: 1px solid #ddd;
+      padding: 10px;
+      color: #666;
+      font-size: 13px;
+    }
+
+    .range-wrap .range li:after {
+      display: block;
+      content: '';
+      clear: both;
+    }
+
+    .range-wrap .range li .sub-title {
+      display: block;
+    }
+
+    .sub-title em {
+      color: red;
+    }
+
+    .sub-title span {
+      background-color: #33d033;
+      color: #ffffff;
+      font-size: 10px;
+      padding: 3px;
+      margin-right: 3px;
+    }
+
+    .range-wrap .range li .btn-wrap {
+      float: right;
+      padding-top: 10px;
+    }
+
+    .range-wrap .range li .btn-wrap .new-win {
+      display: inline-block;
+      border: 1px solid #666;
+      padding: 3px;
+      font-size: 11px;
+    }
+
+    .range-wrap .range li .btn-wrap a.ready {
+      color: #ccc;
+    }
+
+    .range-wrap .range li .btn-wrap a.on {
+      color: #f00;
+    }
+
+    iframe {
+      width: calc(100% - 270px);
+      position: absolute;
+      left: 270px;
+      top: 0;
+      height: 100%;
+      box-sizing: border-box;
+      display: inline-block;
+      border: 0;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    iframe.mobile {
+      width: 414px;
+      height: 667px;
+      padding: 0;
+      overflow: scroll;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="sitemap-menu">
+    <button class="viewersize">모바일size보기</button>
+    <ul class="tabs-btn">
+      <li class="on"><a href="javascript:void(0)">admin</a></li>
+      <li><a href="javascript:void(0)">web</a></li>
+      <li><a href="javascript:void(0)">스타일가이드</a></li>
+    </ul>
+    <div class="range-wrap on">
+      <div class="range">
+        <h3>admin</h3>
+        <h4>로그인</h4>
+        <ul>
+          <li>
+            <div class="sub-title">로그인</div>
+            <div class="btn-wrap">
+              <a href="view/login.html" target="viewer">view/login.html</a>
+              <a href="view/login.html" target="_blank" class="new-win">새창</a>
+            </div>
+          </li>
+        </ul>
+        <h4>기본화면</h4>
+        <ul>
+          <li>
+            <div class="sub-title">기본화면</div>
+            <div class="btn-wrap">
+              <a href="view/default.html" target="viewer">view/default.html</a>
+              <a href="view/default.html" target="_blank" class="new-win">새창</a>
+            </div>
+          </li>
+        </ul>
+        <!-- <h4>레이아웃</h4>
+        <ul>
+          <li>
+            <div class="sub-title">레이아웃</div>
+            <div class="btn-wrap">
+              <a href="view/layout.html" target="viewer">view/layout.html</a>
+              <a href="view/layout.html" target="_blank" class="new-win">새창</a>
+            </div>
+          </li>
+        </ul> -->
+        <h4>마이프로젝트</h4>
+        <ul>
+          <li>
+            <div class="sub-title">마이프로젝트 (직무추천, 지원접수)</div>
+            <div class="btn-wrap">
+              <a href="view/myProject.html" target="viewer">view/myProject.html</a>
+              <a href="view/myProject.html" target="_blank" class="new-win">새창</a>
+            </div>
+          </li>
+        </ul>
+        <h4>마이피플</h4>
+        <ul>
+          <li>
+            <div class="sub-title">마이피플 - 기본</div>
+            <div class="btn-wrap">
+              <a href="view/myPeople_default.html" target="viewer">view/myPeople_default.html</a>
+              <a href="view/myPeople_default.html" target="_blank" class="new-win">새창</a>
+            </div>
+          </li>
+          <li>
+            <div class="sub-title">마이피플 - 가용인력</div>
+            <div class="btn-wrap">
+              <a href="view/myPeople01.html" target="viewer">view/myPeople01.html</a>
+              <a href="view/myPeople01.html" target="_blank" class="new-win">새창</a>
+            </div>
+          </li>
+          <li>
+            <div class="sub-title">마이피플 - 추천인력</div>
+            <div class="btn-wrap">
+              <a href="view/myPeople02.html" target="viewer">view/myPeople02.html</a>
+              <a href="view/myPeople02.html" target="_blank" class="new-win">새창</a>
+            </div>
+          </li>
+          <li>
+            <div class="sub-title">마이피플 - 확정인력</div>
+            <div class="btn-wrap">
+              <a href="view/myPeople03.html" target="viewer">view/myPeople03.html</a>
+              <a href="view/myPeople03.html" target="_blank" class="new-win">새창</a>
+            </div>
+          </li>
+          <li>
+            <div class="sub-title">마이피플 - 정보없음</div>
+            <div class="btn-wrap">
+              <a href="view/myPeople_nodata.html" target="viewer">view/myPeople_nodata.html</a>
+              <a href="view/myPeople_nodata.html" target="_blank" class="new-win">새창</a>
+            </div>
+          </li>
+        </ul>
+        <h4>프로젝트</h4>        
+        <ul>
+          <li>
+            <div class="sub-title">프로젝트 의뢰목록</div>
+            <div class="btn-wrap">
+              <a href="view/projReqList.html" target="viewer">view/projReqList.html</a>
+              <a href="view/projReqList.html" target="_blank" class="new-win">새창</a>
+            </div>
+          </li>
+          <li>
+            <div class="sub-title">프로젝트 등록</div>
+            <div class="btn-wrap">
+              <a href="view/projRegister.html" target="viewer">view/projRegister.html</a>
+              <a href="view/projRegister.html" target="_blank" class="new-win">새창</a>
+            </div>
+          </li>
+          <li>
+            <div class="sub-title">프로젝트 진행목록</div>
+            <div class="btn-wrap">
+              <a href="view/projProgList.html" target="viewer">view/projProgList.html</a>
+              <a href="view/projProgList.html" target="_blank" class="new-win">새창</a>
+            </div>
+          </li>
+          <li>
+            <div class="sub-title">프로젝트 상세</div>
+            <div class="btn-wrap">
+              <a href="view/projDetail.html" target="viewer">view/projDetail.html</a>
+              <a href="view/projDetail.html" target="_blank" class="new-win">새창</a>
+            </div>
+          </li>
+        </ul>
+        <h4>일반회원</h4>        
+        <ul>
+          <li>
+            <div class="sub-title">일반회원</div>
+            <div class="btn-wrap">
+              <a href="view/generalMember.html" target="viewer">view/generalMember.html</a>
+              <a href="view/generalMember.html" target="_blank" class="new-win">새창</a>
+            </div>
+          </li>
+          <li>
+            <div class="sub-title">일반회원 - 결과없음</div>
+            <div class="btn-wrap">
+              <a href="view/generalMember_nodata.html" target="viewer">view/generalMember_nodata.html</a>
+              <a href="view/generalMember_nodata.html" target="_blank" class="new-win">새창</a>
+            </div>
+          </li>
+        </ul>
+        <h4>회원상세</h4>        
+        <ul>
+          <li>
+            <div class="sub-title">회원상세</div>
+            <div class="btn-wrap">
+              <a href="view/memberDetail.html" target="viewer">view/memberDetail.html</a>
+              <a href="view/memberDetail.html" target="_blank" class="new-win">새창</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="range-wrap">
+      <div class="range">
+        <h3>web</h3> 
+      </div>
+    </div>
+    <div class="range-wrap">
+      <div class="range">
+        <h3>스타일가이드</h3>
+        <h4>스타일가이드</h4>
+        <ul>
+          <li>
+            <span class="sub-title">관리자 스타일가이드</span>
+            <div class="btn-wrap">
+              <a href="view/styleGuide_jobjob.html" target="viewer">view/styleGuide_jobjob.html</a>
+              <a href="view/styleGuide_jobjob.html" target="_blank" class="new-win">새창</a>
+            </div>
+          </li>
+        </ul>
+        <h4>모달창</h4>
+        <ul>
+          <li>
+            <span class="sub-title">모달창</span>
+            <div class="btn-wrap">
+              <a href="view/modal.html" target="viewer">view/modal.html</a>
+              <a href="view/modal.html" target="_blank" class="new-win">새창</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  <iframe src="" name="viewer" class="" style="overflow:hidden;"></iframe>
+
+  <script>
+    // link
+    var links = $('.range a');
+    for (i = 0; i < links.length; i++) {
+      links[i].addEventListener("click", function () {
+        for (i = 0; i < links.length; i++) {
+          links[i].classList.remove('on');
+
+        }
+        this.classList.add('on');
+      })
+
+    }
+    // tab
+    $('.tabs-btn a').click(function () {
+      $(this).parent('li').addClass('on').siblings().removeClass('on');
+      var index = $(this).parent('li').index();
+      $('.range-wrap').eq(index).addClass('on').siblings().removeClass('on');;
+    });
+
+    $('.viewersize').click(function () {
+
+      $('iframe').toggleClass('mobile');
+    });
+
+
+    $('.title.lg').click(function () {
+      $(this).toggleClass('on');
+      $(this).next("div.range").slideToggle();
+    });
+    $('.title.lg').click();
+  </script>
+</body>
+
+</html>

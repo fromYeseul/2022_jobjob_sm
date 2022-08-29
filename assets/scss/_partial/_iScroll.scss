@@ -1,0 +1,21 @@
+//마이프로젝트, 프로젝트 상세 페이지
+//선택된 직무유형 영역 스크롤바
+
+.iscroll {
+    overflow: hidden;
+    position: relative;
+}
+.iScrollVerticalScrollbar {
+    width: 10px !important;
+    height: 90%;
+    border-radius: 5px;
+    background: #f2f2f7 !important;
+    top: 10px !important;
+    right: 8px !important;
+    z-index: 0 !important; 
+    .iScrollIndicator{
+        background: #58585e !important;
+        border: 0 !important;
+        border-radius: 5px !important;
+    }
+}

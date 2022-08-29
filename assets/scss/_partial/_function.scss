@@ -1,0 +1,40 @@
+@charset 'utf-8';
+//단위변환 기본값
+$device-width: 1080;
+$body-font-size: 16;
+
+// 단위변환
+@function rem($px){
+  $convert: $px / $body-font-size;
+  @return $convert+rem;
+}
+
+@function vw($px){
+  $convert: $px / $device-width * 100;
+  @return $convert+vw;
+}
+
+@function vh($px){
+  $convert: $px / $device-width * 100;
+  @return $convert+vh;
+}
+
+//모바일단위변환 기본값
+$mo-device-width: 750;
+$mo-body-font-size: 16 * 2;
+
+// 단위변환
+@function morem($px){
+  $convert: $px / $body-font-size;
+  @return $convert+rem;
+}
+
+@function movw($px){
+  $convert: $px / $device-width * 100;
+  @return $convert+vw;
+}
+
+@function movh($px){
+  $convert: $px / $device-width * 100;
+  @return $convert+vh;
+}

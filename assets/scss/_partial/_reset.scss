@@ -1,0 +1,50 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    color: #29292c;
+    font-family: 'NotoSansKR', sans-serif;
+    font-weight: normal;
+    font-size: rem(14);
+    letter-spacing: -0.5px;
+}
+body{
+    -webkit-text-size-adjust : none;
+    *{
+        box-sizing: border-box;
+    }
+}
+ul,ol,li, dl, dt, dd{
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+a{
+    color: #29292c; 
+    text-decoration: none;
+}
+input, select, textarea, fieldset, button{
+    outline: none;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    min-width: auto;
+    border: 0;
+    font-family: 'NotoSansKR', sans-serif;
+    font-weight: normal;
+    //220829
+    // font-size: 16px;
+    font-size: rem(14);
+    //220829
+    letter-spacing: -0.5px;
+}
+table{
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+img{
+    display: inline-block;
+}
+h1,h2,h3,h4,h5,h6, p{
+    margin: 0;
+}
+

@@ -1,0 +1,184 @@
+
+//메인컬러
+$mainColor : #0460d2;
+$bgColor : #f2f2f7;
+$layoutColor : #e6e6eb;
+//$layoutColor : #ff0000;
+
+//상태컬러
+$error : #ff1236;
+$disable : #878791;
+$subInfo : $disable;
+
+$highlight : #009ce0;
+$onGoing : #ffc812;
+$cancel : #b7b7c4;
+$delay : #ff1236;
+$gnbGreen : #89c895;
+
+//모노톤
+$black : #29292c;
+$gray : #828286;
+$subGray : #8f8f8f;
+$white : #fff;
+$beige : #e4e3dc;
+$beigeTit : #7e7b63;
+
+$gnbGray : #bcbcc4;
+$inputGray : $layoutColor;
+$placeholder : $disable;
+$placeGray : #a5a5ac;
+
+$tableBgGray : $gnbGray;
+$tableBorder : $inputGray;
+$tableGray : $placeholder;
+
+$tabGray : $layoutColor;
+
+$btnGray : $cancel;
+
+$selGray : $cancel;
+$selOptList : $layoutColor;
+$selHover : #e5effa;
+
+$memLayout : $layoutColor;
+$jobLayout : $layoutColor;
+
+$titleGray : $cancel;
+$condiGray : $placeholder;
+$systemGray : $placeholder;
+$tooltipGray : #58585e;
+
+$scrollTrack : $bgColor;
+$scrollThumb : $tooltipGray;
+
+$footerGray : $titleGray;
+
+
+
+.hasFooter{
+    overflow-y: hidden;
+}
+
+//상태별 색상
+.sOrder{
+    color: $highlight;
+}
+.sCancel{
+    color: $cancel;
+}
+.sReject{
+    color: $delay;
+}
+
+//평가별 색상
+.eHigh{
+    color: $highlight;
+}
+.eLow{
+    color: $delay;
+}
+
+//기한별 색상
+.dNear{
+    color: $delay !important;
+}
+.dOngoing{
+    color: $highlight !important;
+}
+.dNone{
+    color: $highlight !important;
+}
+
+
+//에러텍스트
+.error{
+    display: none;
+    color: $error;
+    font-size: rem(14);
+    text-indent: rem(16);
+    margin-top: rem(6);
+    &.is-active{
+        display: block;
+    }
+    + input[type=password]{
+        margin-top: rem(10);
+    }
+}
+
+//감추기
+.blind {
+    position: absolute;
+    overflow: hidden;
+    margin: -1px;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    border: none;
+    clip: rect(0, 0, 0, 0);
+}
+
+
+//정렬
+.flex{
+    display: flex;
+}
+.flexCenter{
+    display: flex;
+    align-items: center;
+}
+.flexEnd{
+    display: flex;
+    align-items: end;
+}
+.flexBetween{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;;
+}
+
+.block{
+    display: block;
+}
+.txtCenter{
+    text-align: center;
+}
+.float_r{
+    float: right;
+}
+
+
+//스크롤 커스텀
+.yScroll{
+    overflow-y: auto;
+}
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background-color: $scrollTrack; //#f2f2f7
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background-color: $scrollThumb; //#58585e
+    //트랙사이 간격
+    //background-clip: padding-box;
+    //border: 2px solid transparent;
+}
+::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+}
+
+.mr0{margin-right: 0 !important;}
+
+.ml15{margin-left: rem(15) !important;}
+
+.mt20{margin-top: rem(20) !important;}
+
+.h100{height: 100%;}
+.lh50{line-height: rem(50);}
+
+.p0-30{padding: 0 rem(30);}
